@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #FF5722;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        .header-title a {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+            gap: 10px;
+        }
+        nav a {
+            display: inline-block;
+            padding: 8px 12px;
+            text-decoration: none;
+            background: white;
+            color: #FF5722;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+            white-space: nowrap;
+        }
+        nav a:hover {
+            background: #FF8A65;
+            color: white;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 100px auto 10px auto;
+        }
+
+        .intro {
+            width: 100%;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .intro p {
+            font-size: 20px;
+            line-height: 1.8;
+            color: #555;
+        }
+       
+
+        .section {
+            width: 100%;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+             /*color: #FF5722;*/
+            font-size: 26px;
+            font-weight: bold;
+        }
+        .section h3 {
+            color: #242120;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .section p, .section li {
+            font-size: 20px;
+            line-height: 1.8;
+            color: #555;
+        }
+        .section a, .intro a {
+            color: #FF5722;
+            text-decoration: none;
+            /* font-weight: bold; */
+            transition: background 0.3s;
+        }
+        .section a:hover, .intro a:hover {
+            background-color: #FFDDC1;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-title"><a href="index.html">ANDREA GIOIA</a></div>
+        <nav>
+            <a href="book/book.html">Book</a>
+            <a href="podcast/podcast.html">Podcast</a>
+            <a href="rants/rants.html">Rants</a>
+            <a href="blog/blog.html">Blog</a>
+            <a href="talks/talks.html">Talks</a>
+        </nav>
+    </header>
+    <div class="container">
+        <img src="images/me.png" alt="My Photo">
+        <div class="intro">
+            <h1>Hi there 👋</h1>
+            <p>I'm Andrea Gioia, CTO at <a href="https://www.quantyca.it/">Quantyca</a>, and Co-founder of <a href="https://blindata.io/">blindata.io</a>. With 20+ years in the game, I have navigated the data universe up and down, one project at a time.</p>
+            <p>📙 Author of the book <a href="https://a.co/d/452Qkih">Managing Data As A Product</a>, published by Packt in 2024.</p>
+            <p>🚀 Proudly steering the ship at the <a href="https://www.meetup.com/it-IT/data-engineering-italy/">Data Engineering Italy Meetup</a> and championing the <a href="https://initiative.opendatamesh.org/">Open Data Mesh Initiative</a>.</p>
+            <p>🟠 Maintainer of the <a href="https://dpds.opendatamesh.org/">data product descriptor specification</a> and product owner of the open-source <a href="https://github.com/opendatamesh-initiative/odm-platform">ODM Platform</a>.</p>
+            <p>🛠️ Contributor of <a href="https://ekgf.github.io/dprod/">Data Product Ontology (DPROD)</a>.</p>
+            <p>🌐 Member of <a href="https://www.dama.org/cpages/home">DAMA</a> and part of the scientific committee of the <a href="https://dama-italy.org/">DAMA Italian Chapter</a> since 2023.</p>
+            <p>📫 You can reach me on <a href="https://www.linkedin.com/in/andreagioia/">LinkedIn</a>.</p>
+        </div>
+        <div class="section">
+            <h2>Here, there and everywhere</h2>
+            <p>[Your latest activity feed will appear here]</p>
+        </div>
+        <div class="section">
+            <h2>My feed</h2>
+            <h3>Upcoming stuff</h3>
+            <ol>
+                <li><a href="https://datainnovationsummit.com/">Data Innovation Summit</a> @ Stockholm; May 2025 🇬🇧</li>
+                <li><a href="https://2025.datameshlive.com/">Data Mesh Live</a> @ Antwerp; June 2025 🇬🇧</li>
+                <li><a href="https://www.bigdataldn.com/">Big Data London</a> @ London; September 2025 🇬🇧</li>
+            </ol>
+            <h3>Recent stuff</h3>
+            <ol>
+                <li>🎥 <a href="https://www.linkedin.com/events/damaitalybookclub-managingdataa7298302218586275841/comments">Managing Data as a Product</a> @ DAMA Italy Book Club; March 2025 🇮🇹</li>
+                <li>🎥 <a href="https://www.youtube.com/watch?v=Sqi98tJNdkQ">From Monolithic Knowledge Graph to Distributed Knowledge Mesh</a> @ ESTES PARK GROUP; March 2025 🇬🇧</li>
+                <li>📝 <a href="https://medium.com/@andrea_gioia/data-contract-vs-data-product-specifications-8ffa3cc16725">Data Contract vs. Data Product Specifications: Friends, Enemies, or Frenemies?</a> @ Medium Blog</li>
+                <li>📝 <a href="https://medium.com/@andrea_gioia/how-to-define-internal-data-specifications-to-govern-your-data-ecosystem-9d59b3473dfe">How to Define Internal Data Specifications to Govern Your Data Ecosystem</a> @ Medium Blog</li>
+                <li>🎥 <a href="https://youtu.be/_12MjtLCJnQ?si=42Y93qfhOTLyC01e">What's Data Product</a> @ Lets Talk About Data‬ Podcast 2025 🇬🇧</li>
+            </ol>
+            <h3>2024 stuff</h3>
+            <ol>
+                <li>🎥 <a href="https://www.youtube.com/watch?v=QCE6DUWnGZ4">Special Episode: Managing Data as a Product "The Book"</a> @ Tapas And Pretzels Podcast 2024 🇬🇧</li>
+                <li>📝 <a href="https://medium.com/p/19faa223f91b">What I Talk About When I Talk About Data Product</a> @ Medium Blog</li>
+                <li>📙 <a href="https://github.com/PacktPublishing/Managing-Data-as-a-Product/tree/main">Managing Data as a Product</a> @ Everywhere; December 2024 🇬🇧</li>
+                <li>📝 <a href="https://speakerdeck.com/angioia/building-your-enterprise-knowledge-graph-one-data-product-at-a-time">Building your Enterprise Knowledge Graph one data product at a time</a> @ Connected Data London; December 2024 🇬🇧</li>
+                <li>🎥 <a href="https://www.youtube.com/watch?v=MytpBc5EAsE">Why we need to focus on Knowledge Management, NOW!</a> @ Catalog & Cocktails: The Honest No-BS Data Podcast 2024 🇬🇧</li>
+                <li>🎥 <a href="https://www.youtube.com/watch?v=ethMBybkkCI">Knowledge Driven Data Management</a> @ Big Data LND 2024 🇬🇧</li>
+                <li>🎥 <a href="https://www.linkedin.com/feed/update/urn:li:activity:7232370974078234625/">Data Products & the Platform Organization</a> @ Boundaryless Webinar 🇬🇧</li>
+                <li>🎥 <a href="https://www.youtube.com/watch?v=35GAreCLkeM&t=2s">Architects & Data in a Volatile World</a> @ Data Value Show 2024 🇬🇧</li>
+                <li>🎥 <a href="https://www.youtube.com/watch?v=pC8fPaKdm3M">Managing Data as a Product: Overcoming the Challenges of Traditional Data Management</a> @ Tapas And Pretzels Podcast 2024 🇬🇧</li>
+                <li>🎥 <a href="https://www.youtube.com/watch?v=1fsD2JpEQqg&feature=youtu.be">Data Product Catalog: from Data Contracts to knowledge graph</a> @ Data Innovation Summit 2024 🇬🇧</li>
+                <li>🎥 <a href="https://www.youtube.com/watch?v=epuclRDokQM">A Panel Discussion on Data-Centricity + Artificial Intelligence</a> @ SWARM Community; April 2024 🇬🇧</li>
+                <li>🎥 <a href="https://youtu.be/Oe0mjHM2Ghw?si=9ZrA7qEvzTX8P2iA">Information Architecture From Data Products to Knowledge Graph</a> @ SWARM Community; May 2024 🇬🇧</li>
+            </ol>
+            <h3>2023 stuff</h3>
+            <ol>
+                <li>🎥 <a href="https://dama-italy.org/diac-2023/">Il ruolo del data management nell’era dell’AI Generativa</a> @ DAMA Italy Annual Convention; 2023 🇮🇹</li>
+                <li>📝 <a href="https://online.pubhtml5.com/vbdo/kkbl/#p=25">LLMs e Knowledge Graphs: un matrimonio perfetto</a> @ AgileItalia Magazine; 2023 🇮🇹</li>
+                <li>🎥 <a href="https://www.youtube.com/watch?v=ap8pWiRBvJQ">Semantic Data Product</a> @ Big Data LND; 2023 🇬🇧</li>
+                <li>🎥 <a href="https://www.youtube.com/watch?v=CKqSNn-7wiw">Data contract in practice</a> @ Data Innovation Summit 2023 🇬🇧</li>
+                <li>📝 <a href="https://medium.com/better-programming/data-contracts-in-practice-93e58d324f34">Data contract in practice</a> @ Medium; 2023 🇬🇧</li>
+                <li>📝 <a href="https://online.pubhtml5.com/vbdo/avys/#p=38">Dalla sperimentazione alla produzione con l’MLOps</a> @ AgileItalia Magazine; 2022 🇮🇹</li>
+                <li>📝 <a href="https://online.pubhtml5.com/vbdo/kslm/#p=34">Il Data Mesh e l'innovazione nel data management</a> @ AgileItalia Magazine; 2019 🇮🇹</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

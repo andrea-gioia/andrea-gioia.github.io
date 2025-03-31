@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding AI - Blog Post</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            padding: 40px;
+            background: white;
+            border-radius: 10px;
+        }
+        header {
+            background-color: #FF5722;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+        }
+        .header-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav a {
+            display: inline-block;
+            margin-left: 15px;
+            padding: 10px 15px;
+            text-decoration: none;
+            background: white;
+            color: #FF5722;
+            border-radius: 5px;
+        }
+        .post-title {
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            color: #FF5722;
+            margin-top: 20px;
+        }
+        .post-subtitle {
+            font-size: 24px;
+            font-weight: normal;
+            text-align: center;
+            color: #666;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .post-meta {
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 20px;
+        }
+        .abstract-box {
+            background-color: #FFE0B2;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+        .post-content {
+            line-height: 1.8;
+            font-size: 18px;
+            padding: 0 40px;
+        }
+        blockquote {
+            border-left: 5px solid #FF5722;
+            padding-left: 15px;
+            font-style: italic;
+            color: #555;
+            margin: 20px 0;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: monospace;
+        }
+        .resources-box {
+            background-color: #FF5722;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 40px;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .resources-box h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        .resources-box ul {
+            padding: 0;
+            list-style: none;
+            color: white;
+        }
+        .resources-box ul li {
+            margin-bottom: 10px;
+        }
+        .resources-box ul li a {
+            text-decoration: none;
+            color: #FFF;
+            font-weight: bold;
+        }
+        .resources-box ul li a:hover {
+            text-decoration: underline;
+        }
+        .post-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            max-height: 400px;
+            margin-bottom: 30px; /* Increased space */
+        }
+        .normal-image {
+            width: 80%;
+            margin: 20px auto;
+            display: block;
+            border-radius: 8px;
+        }
+        .image-caption {
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-title">MY BLOG</div>
+        <nav>
+            <a href="book.html">Books</a>
+            <a href="blog.html">Blog</a>
+            <a href="talks.html">Talks</a>
+            <a href="podcast.html">Podcast</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <h1 class="post-title">Understanding AI</h1>
+        <h2 class="post-subtitle">How AI is transforming our world</h2>
+        <p class="post-meta">Published on March 29, 2025 by John Doe</p>
+        
+        <!-- Banner Image -->
+        <img class="post-image" src="blog-001.jpeg" alt="AI Image">
+        
+        <!-- Abstract Box moved after Image with added space -->
+        <div class="abstract-box">
+            <p><b>Artificial Intelligence</b> is a rapidly evolving field that is reshaping industries and daily life. This post explores <i>machine learning</i>, its applications, and the challenges it presents.</p>
+        </div>
+        
+        <div class="post-content">
+            <h2>Introduction</h2>
+            <p>Artificial Intelligence (AI) is transforming the way we live and work. From automating simple tasks to making complex decisions, AI is everywhere. But what exactly is AI, and how does it work?</p>
+            
+            <h2>Understanding AI</h2>
+            <h3>Machine Learning</h3>
+            <p>One of the most common types of AI is <b>machine learning</b>, which allows systems to learn from data and improve over time without being explicitly programmed. <i>Deep learning</i>, a subset of machine learning, uses neural networks to process large amounts of information and make highly accurate predictions.</p>
+            
+            <h3>AI in Different Industries</h3>
+            <p>The impact of AI is visible in multiple industries:</p>
+            <ul>
+                <li><b>Healthcare</b>: AI assists in diagnosing diseases and developing personalized treatment plans.</li>
+                <li><b>Finance</b>: It helps detect fraudulent transactions.</li>
+                <li><b>Marketing</b>: AI-driven algorithms personalize user experiences and improve ad targeting.</li>
+            </ul>
+            
+            <h2>Example: AI Model in JSON</h2>
+            <pre><code>{
+    "model": "neural_network",
+    "layers": [
+        {"type": "input", "size": 10},
+        {"type": "hidden", "size": 20, "activation": "relu"},
+        {"type": "output", "size": 1, "activation": "sigmoid"}
+    ],
+    "training": {
+        "epochs": 100,
+        "batch_size": 32,
+        "optimizer": "adam"
+    }
+}</code></pre>
+            
+            <h2>Challenges and Ethical Concerns</h2>
+            <blockquote>“AI is not just a tool; it’s a revolution that will redefine the way humans and machines interact.”</blockquote>
+            <p>Despite its advantages, AI also comes with challenges. Ethical concerns such as <i>data privacy</i>, bias in decision-making, and job displacement are hot topics in AI discussions. It is essential to create regulations and guidelines to ensure AI is used responsibly.</p>
+
+            <!-- Additional Image in the Post -->
+            <img class="normal-image" src="2025-B001-b008-dpds-with-odcs.png" alt="AI Example Image">
+            <div class="image-caption">Example of AI processing data</div>
+            
+            <h2>Conclusion</h2>
+            <p>Artificial Intelligence is here to stay. As we continue to innovate, we must also address the challenges and ethical concerns to ensure that AI benefits society as a whole.</p>
+            
+            <div class="resources-box">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Introduction to AI - Online Course</a></li>
+                    <li><a href="#">Ethics in AI - Research Paper</a></li>
+                    <li><a href="#">Machine Learning Basics - Blog Post</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talks - Andrea Gioia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #FF5722;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        .header-image {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            cursor: pointer;
+            vertical-align: middle;
+        }
+        .header-title {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 20px;
+            line-height: 40px; /* Ensures the text is vertically centered with the image */
+        }
+        .header-title a {
+            text-decoration: none;
+            color: white;
+        }
+        nav {
+            display: flex;
+            gap: 10px;
+            margin-left: auto;
+        }
+        nav a {
+            display: inline-block;
+            padding: 8px 12px;
+            text-decoration: none;
+            background: white;
+            color: #FF5722;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+            white-space: nowrap;
+        }
+        nav a:hover {
+            background: #FF8A65;
+            color: white;
+        }
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+            padding: 80px 20px 20px 20px; /* Adjusted for the fixed header */
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .video-item {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 480px; /* Fixed height */
+            position: relative;
+        }
+        .video-item iframe {
+            width: 100%;
+            height: 200px;
+        }
+        .video-item h3 {
+            padding: 15px;
+            font-size: 18px;
+            color: #FF5722;
+            margin: 0;
+            height: 50px; /* Fixed height for title */
+            overflow: hidden;
+        }
+        .video-item p {
+            padding: 0 15px 15px;
+            font-size: 14px;
+            color: #555;
+            flex-grow: 1;
+            margin: 0;
+            display: flex;
+            align-items: flex-start;
+        }
+        .video-item .video-info {
+            padding: 0 15px 15px;
+            font-size: 12px; /* Smaller font size */
+            color: #777;
+            height: 40px; /* Fixed height for info section */
+            display: flex;
+            justify-content: space-between; /* Align the info and button to opposite sides */
+            align-items: center;
+        }
+        .video-item .video-info span {
+            display: block;
+        }
+        .video-item .play-button {
+            background-color: #FF5722;
+            color: white;
+            padding: 6px 10px;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .video-item .play-button:hover {
+            background-color: #FF8A65;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html">
+            <img src="../images/me.png" alt="Andrea Gioia" class="header-image">
+        </a>
+        <div class="header-title">
+            <a href="talks.html">> TALKS</a>
+        </div>
+        <nav>
+            <a href="../book/book.html">Book</a>
+            <a href="../podcast/podcast.html">Podcast</a>
+            <a href="../rants/rants.html">Rants</a>
+            <a href="../blog/blog.html">Blog</a>
+            <a href="../talks/talks.html">Talks</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Talks by Andrea Gioia</h2>
+        <p>Welcome to the talks page! Here you can find a collection of my past talks, interviews, and discussions on various topics related to data management, data product development, and much more. Feel free to explore!</p>
+        
+        <div class="video-grid">
+           
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/Sqi98tJNdkQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>From Monolithic Knowledge Graph to Distributed Knowledge Mesh</h3>
+                <p>In this session, I discuss the evolution from monolithic knowledge graphs to distributed knowledge meshes and why this is a critical step in modern data architectures.</p>
+                <div class="video-info">
+                    <span>Published on:<br>Mar 7, 2025</span>
+                    <span>Duration:<br>1:21:20</span>
+                    <button class="play-button" onclick="window.open('https://www.youtube.com/watch?v=Sqi98tJNdkQ', '_blank')">Play on YouTube</button>
+                </div>
+            </div>
+
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/_12MjtLCJnQ?si=sYlwP7up-z1UwAPN" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>What's Data Product</h3>
+                <p>In this session, I’ll explore how data products drive business impact, sharing strategies for design, overcoming challenges, and aligning business goals with technology.</p>
+                <div class="video-info">
+                    <span>Published on:<br>Jan 23, 2025</span>
+                    <span>Duration:<br>1:21:20</span>
+                    <button class="play-button" onclick="window.open('https://www.youtube.com/watch?v=Sqi98tJNdkQ', '_blank')">Play on YouTube</button>
+                </div>
+            </div>
+
+
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/QCE6DUWnGZ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Managing Data as a Product: The Book</h3>
+                <p>This talk is about the concepts behind my book, "Managing Data as a Product," where I discuss how data can be managed as a product, just like any other product in an organization.</p>
+                <div class="video-info">
+                    <span>Published on:<br>Dec 23, 2024</span>
+                    <span>Duration:<br>00:39:11</span>
+                    <button class="play-button" onclick="window.open('https://www.youtube.com/watch?v=QCE6DUWnGZ4', '_blank')">Play on YouTube</button>
+                </div>
+            </div>
+
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/MytpBc5EAsE?si=nnWdvoSy7xR46nLh" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Why we need to focus on Knowledge Management, NOW!</h3>
+                <p>I discuss with Tim and Juan how data management challenges stem from people, not technology. As AI evolves, making knowledge a first-class citizen is a must.</p>
+                <div class="video-info">
+                    <span>Published on:<br>Oct 23, 2024</span>
+                    <span>Duration:<br>01:06:19</span>
+                    <button class="play-button" onclick="window.open('https://www.youtube.com/watch?v=MytpBc5EAsE', '_blank')">Play on YouTube</button>
+                </div>
+            </div>
+
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/q4AYYIUtfks?si=cD7ah_nN54MtG2ml" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Data Products and Platform Organizations</h3>
+                <p>In the second session of the Summer of Platform Organizations series, I joined Luca Ruggeri, Shruthi Prakash, and Paolo Plater to discuss how combining platform design and data mesh architecture can drive innovation through data products.</p>
+                <div class="video-info">
+                    <span>Published on:<br>Sep 6, 2024</span>
+                    <span>Duration:<br>01:00:07</span>
+                    <button class="play-button" onclick="window.open('https://www.youtube.com/watch?v=q4AYYIUtfks', '_blank')">Play on YouTube</button>
+                </div>
+            </div>
+
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/epuclRDokQM?si=rEFaQqfPpqN9mSH-" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>A Panel Discussion on Data-Centricity & Artificial Intelligence</h3>
+                <p>In this panel, I joined Dr. Hala Nelson and Dr. Giuseppe Futia to discuss data-centricity, AI adoption, and governance, covering topics like data modeling, entity disambiguation, and managing data as a product.</p>
+                <div class="video-info">
+                    <span>Published on:<br>Apr 21, 2024</span>
+                    <span>Duration:<br>01:00:24</span>
+                    <button class="play-button" onclick="window.open('https://www.youtube.com/watch?v=epuclRDokQM', '_blank')">Play on YouTube</button>
+                </div>
+            </div>
+
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/pC8fPaKdm3M?si=evFTyu9XlD0nDCJ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Managing Data as a Product: Overcoming the Challenges of Traditional Data Management</h3>
+                <p>In this conversation, I discuss managing data as a product, the challenges of traditional data management, and the need for a convergent platform integrating data and AI. </p>
+                <div class="video-info">
+                    <span>Published on:<br>Jun 17, 2024</span>
+                    <span>Duration:<br>00:35:56</span>
+                    <button class="play-button" onclick="window.open('https://www.youtube.com/watch?v=pC8fPaKdm3M', '_blank')">Play on YouTube</button>
+                </div>
+            </div>
+
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/35GAreCLkeM?si=fJu_32zKaRSNdeQx" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Architects & Data in a Volatile World</h3>
+                <p>In this discussion, Chris Tabb and I explore how embracing uncertainty can give companies a competitive edge, and the role of enterprise architects in creating adaptable, modular architectures for future success. </p>
+                <div class="video-info">
+                    <span>Published on:<br>Jun 11, 2024</span>
+                    <span>Duration:<br>00:59:27</span>
+                    <button class="play-button" onclick="window.open('https://www.youtube.com/watch?v=35GAreCLkeM', '_blank')">Play on YouTube</button>
+                </div>
+            </div>
+
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/ethMBybkkCI?si=3vJIkk-CEWDdNdN7" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Knowledge-Driven Data Management</h3>
+                <p>At Big Data London 2024, Jacopo Aliprandi and I explored how linking domain-specific data products with a shared enterprise ontology transforms raw data into actionable insights, driving innovation and achieving strategic goals.</p>
+                <div class="video-info">
+                    <span>Published on:<br>Oct 14, 2024</span>
+                    <span>Duration:<br>00:29:30</span>
+                    <button class="play-button" onclick="window.open('https://www.youtube.com/watch?v=ethMBybkkCI', '_blank')">Play on YouTube</button>
+                </div>
+            </div>
+
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/gdJZZdbETG0?si=e1tZCsyhSLvc3PLP" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>On-site Interview at Data Innovation Summit 2024</h3>
+                <p>During this on-site interview at the Data Innovation Summit 2024, I had the pleasure of speaking about my work as CTO & Partner at Quantyca SpA.</p>
+                <div class="video-info">
+                    <span>Published on:<br>May 21, 2024</span>
+                    <span>Duration:<br>00:03:18</span>
+                    <button class="play-button" onclick="window.open('https://www.youtube.com/watch?v=gdJZZdbETG0', '_blank')">Play on YouTube</button>
+                </div>
+            </div>
+
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/1fsD2JpEQqg?si=VsYLZn_Eba7DcZwf" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Data Product Catalog: from Data Contracts to Knowledge Graph</h3>
+                <p>At the Data Innovation Summit 2024, Jacopo Aliprandi and I introduced the data product catalog, which uses metadata to make data products composable and connect them intto a knowledge graph, enabling self-service analytics and generative AI.</p>
+                <div class="video-info">
+                    <span>Published on:<br>May 13, 2024</span>
+                    <span>Duration:<br>00:18:57</span>
+                    <button class="play-button" onclick="window.open('https://www.youtube.com/watch?v=1fsD2JpEQqg', '_blank')">Play on YouTube</button>
+                </div>
+            </div>
+
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/Be3rdcdKqLo?si=em0SyyeWVWV2DcZq" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Road to Data Innovation Summit 2024</h3>
+                <p>In this interview, before the Data Innovation Summit, I discussed how a modern data catalog centered on data products enables comprehensive management of information architecture at scale.</p>
+                <div class="video-info">
+                    <span>Published on:<br>Mar 11, 2024</span>
+                    <span>Duration:<br>00:23:02</span>
+                    <button class="play-button" onclick="window.open('https://www.youtube.com/watch?v=Be3rdcdKqLo', '_blank')">Play on YouTube</button>
+                </div>
+            </div>
+
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/Oe0mjHM2Ghw?si=vH4XWw5x_Jd-KjUk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Information Architecture From Data Products to Knowledge Graph</h3>
+                <p>In this webinar for the Swarm community, organized by Joaquin Melara, I explored how to build an information architecture that enables data product interoperability—not only syntactically but also semantically.</p>
+                <div class="video-info">
+                    <span>Published on:<br>Apr 21, 2024</span>
+                    <span>Duration:<br>00:45:47</span>
+                    <button class="play-button" onclick="window.open('https://www.youtube.com/watch?v=Oe0mjHM2Ghw', '_blank')">Play on YouTube</button>
+                </div>
+            </div>
+
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/ap8pWiRBvJQ?si=sY3nIzOepVvNDJ-9" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Semantic Data Product</h3>
+                <p>In this talk at Big Data London 2023, alongside Francesco Gianferrari Pini, I explored how Large Language Models (LLMs) can significantly enrich Data Management tools, helping to enable a cohesive Data Fabric vision.</p>
+                <div class="video-info">
+                    <span>Published on:<br>Oct 18, 2023</span>
+                    <span>Duration:<br>00:27:59</span>
+                    <button class="play-button" onclick="window.open('https://www.youtube.com/watch?v=ap8pWiRBvJQ', '_blank')">Play on YouTube</button>
+                </div>
+            </div>
+
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/CKqSNn-7wiw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Data Contract in Practice</h3>
+                <p>In this talk at the Data Innovation Summit 2023, I discussed Data Contracts, emphasizing their role in ensuring predictability and avoiding chaos.</p>
+                <div class="video-info">
+                    <span>Published on:<br>May 26, 2023</span>
+                    <span>Duration:<br>00:17:00</span>
+                    <button class="play-button" onclick="window.open('https://www.youtube.com/embed/CKqSNn-7wiw', '_blank')">Play on YouTube</button>
+                </div>
+            </div>       
+
+           
+            
+            <!-- Add more video items as needed -->
+        </div>
+    </div>
+</body>
+</html>

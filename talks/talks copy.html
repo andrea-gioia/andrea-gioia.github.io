@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talks - Andrea Gioia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #FF5722;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        .header-image {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            cursor: pointer;
+            vertical-align: middle;
+        }
+        .header-title {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 20px;
+            line-height: 40px; /* Ensures the text is vertically centered with the image */
+        }
+        .header-title a {
+            text-decoration: none;
+            color: white;
+        }
+        nav {
+            display: flex;
+            gap: 10px;
+            margin-left: auto;
+        }
+        nav a {
+            display: inline-block;
+            padding: 8px 12px;
+            text-decoration: none;
+            background: white;
+            color: #FF5722;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+            white-space: nowrap;
+        }
+        nav a:hover {
+            background: #FF8A65;
+            color: white;
+        }
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+            padding: 80px 20px 20px 20px; /* Adjusted for the fixed header */
+        }
+        .talk-box {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 150px; /* Fixed height for all sections */
+        }
+        .talk-box img {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+        }
+        .talk-box .talk-content {
+            flex: 1;
+            padding-left: 20px;
+        }
+        .talk-box .talk-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #FF5722;
+        }
+        .talk-box .talk-description {
+            font-size: 14px;
+            color: #555;
+        }
+        .talk-box .talk-meta {
+            font-size: 12px;
+            color: #777;
+            margin-top: 10px;
+        }
+        .play-on-youtube {
+            background-color: #FF5722;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 12px;
+            display: inline-block;
+            text-align: center;
+            margin-top: 10px;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+        .play-on-youtube:hover {
+            background-color: #FF8A65;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="../images/me.png" alt="Andrea Gioia" class="header-image">
+        </a>
+        <div class="header-title">
+            <a href="talks.html">Talks</a>
+        </div>
+        <nav>
+            <a href="book/book.html">Book</a>
+            <a href="podcast/podcast.html">Podcast</a>
+            <a href="rants/rants.html">Rants</a>
+            <a href="blog/blog.html">Blog</a>
+            <a href="talks/talks.html">Talks</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="talk-box">
+            <img src="https://img.youtube.com/vi/Sqi98tJNdkQ/maxresdefault.jpg" alt="From Monolithic Knowledge Graph to Distributed Knowledge Mesh">
+            <div class="talk-content">
+                <div class="talk-title">From Monolithic Knowledge Graph to Distributed Knowledge Mesh</div>
+                <div class="talk-description">A talk about the transition from a monolithic knowledge graph to a distributed knowledge mesh. (March 2025)</div>
+                <div class="talk-meta">Duration: 55 minutes | Published on: March 2025</div>
+            </div>
+            <a href="https://www.youtube.com/watch?v=Sqi98tJNdkQ" class="play-on-youtube" target="_blank">Play on YouTube</a>
+        </div>
+
+        <div class="talk-box">
+            <img src="https://img.youtube.com/vi/CKqSNn-7wiw/maxresdefault.jpg" alt="Data Contract vs. Data Product Specifications">
+            <div class="talk-content">
+                <div class="talk-title">Data Contract vs. Data Product Specifications</div>
+                <div class="talk-description">Exploring the differences between data contracts and data product specifications. (March 2025)</div>
+                <div class="talk-meta">Duration: 45 minutes | Published on: March 2025</div>
+            </div>
+            <a href="https://www.youtube.com/watch?v=CKqSNn-7wiw" class="play-on-youtube" target="_blank">Play on YouTube</a>
+        </div>
+
+        <div class="talk-box">
+            <img src="https://img.youtube.com/vi/1fsD2JpEQqg/maxresdefault.jpg" alt="Data Products & the Platform Organization">
+            <div class="talk-content">
+                <div class="talk-title">Data Products & the Platform Organization</div>
+                <div class="talk-description">A deep dive into how data products are structured within platform organizations. (2024)</div>
+                <div class="talk-meta">Duration: 60 minutes | Published on: 2024</div>
+            </div>
+            <a href="https://www.youtube.com/watch?v=1fsD2JpEQqg" class="play-on-youtube" target="_blank">Play on YouTube</a>
+        </div>
+    </div>
+</body>
+</html>
