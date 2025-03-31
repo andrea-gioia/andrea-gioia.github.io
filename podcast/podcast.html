@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Podcast - My Personal Page</title>
+    <title>The Joy of Data Podcast</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,6 +13,7 @@
             color: #333;
             line-height: 1.6;
         }
+
         header {
             background-color: #FF5722;
             color: white;
@@ -65,13 +66,19 @@
             color: white;
         }
 
-
         .container {
             width: 90%;
             max-width: 1000px;
             margin: auto;
             padding: 80px 20px 20px 20px; /* Adjusted for the fixed header */
         }
+
+        .page-description {
+            font-size: 20px;
+            line-height: 1.8;
+            color: #555;
+        }
+
         .episodes {
             margin-top: 30px;
         }
@@ -89,7 +96,7 @@
             position: relative; /* Required for absolute positioning of play button */
         }
         .episode:hover {
-            background-color: #FFEBEE; /* Very light orange color on hover */
+            background: #FFE0CC;
         }
         .episode-left {
             display: flex;
@@ -157,14 +164,13 @@
     </header>
     
     <div class="container">
-        <div class="podcast-description">
-            <h2>Welcome to My Podcast</h2>
+        <div class="page-description">
             <p>This is the place where I share my thoughts, interviews, and stories on a variety of topics. Tune in for insightful discussions and deep dives into subjects that matter to me.</p>
         </div>
+        
+        <h2>Latest Episodes</h2>
 
-        <div class="episodes">
-            <h2>Latest Episodes</h2>
-            
+        <div class="episodes">           
             <!-- Episode 1 -->
             <a href="episode-001.html" class="no-underline">
                 <div class="episode">
@@ -194,6 +200,22 @@
                                 Here, I discuss how passion can drive success and how to stay motivated in challenging times. Learn how to channel your passion effectively and keep pushing forward.
                             </div>
                             <div class="episode-meta">Released on March 22, 2025 | Duration: 38 min</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Episode 3 -->
+            <a href="episode3.html" class="no-underline">
+                <div class="episode">
+                    <img class="episode-img" src="episode-001.jpeg" alt="Episode 3 Image">
+                    <div class="episode-left">
+                        <div class="episode-info">
+                            <div class="episode-title">Episode 3: Embracing Change</div>
+                            <div class="episode-description">
+                                This episode is all about adapting to change, learning from mistakes, and growing through experiences. Change is inevitable, but how we deal with it makes all the difference.
+                            </div>
+                            <div class="episode-meta">Released on March 15, 2025 | Duration: 40 min</div>
                         </div>
                     </div>
                 </div>

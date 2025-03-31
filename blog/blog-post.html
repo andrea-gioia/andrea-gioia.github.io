@@ -11,35 +11,68 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            line-height: 1.6;
         }
-        .container {
-            width: 60%;
-            margin: auto;
-            padding: 40px;
-            background: white;
-            border-radius: 10px;
-        }
+
         header {
             background-color: #FF5722;
             color: white;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            padding: 15px 30px;
+            padding: 15px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        .header-image {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            cursor: pointer;
+            vertical-align: middle;
         }
         .header-title {
+            color: white;
             font-size: 24px;
             font-weight: bold;
+            margin-left: 20px;
+            line-height: 40px; /* Ensures the text is vertically centered with the image */
+        }
+        .header-title a {
+            text-decoration: none;
+            color: white;
+        }
+        nav {
+            display: flex;
+            gap: 10px;
+            margin-left: auto;
         }
         nav a {
             display: inline-block;
-            margin-left: 15px;
-            padding: 10px 15px;
+            padding: 8px 12px;
             text-decoration: none;
             background: white;
             color: #FF5722;
             border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+            white-space: nowrap;
         }
+        nav a:hover {
+            background: #FF8A65;
+            color: white;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+            padding: 80px 20px 20px 20px; /* Adjusted for the fixed header */
+        }
+        
         .post-title {
             font-size: 32px;
             font-weight: bold;
@@ -145,12 +178,18 @@
 </head>
 <body>
     <header>
-        <div class="header-title">MY BLOG</div>
+        <a href="../index.html">
+            <img src="../images/me.png" alt="Andrea Gioia" class="header-image">
+        </a>
+        <div class="header-title">
+            > <a href="blog.html">BLOG</a> / POST-25-001
+        </div>
         <nav>
-            <a href="book.html">Books</a>
-            <a href="blog.html">Blog</a>
-            <a href="talks.html">Talks</a>
-            <a href="podcast.html">Podcast</a>
+            <a href="../book/book.html">Book</a>
+            <a href="../podcast/podcast.html">Podcast</a>
+            <a href="../rants/rants.html">Rants</a>
+            <a href="../blog/blog.html">Blog</a>
+            <a href="../talks/talks.html">Talks</a>
         </nav>
     </header>
     

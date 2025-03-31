@@ -70,6 +70,13 @@
             margin: auto;
             padding: 80px 20px 20px 20px; /* Adjusted for the fixed header */
         }
+
+        .page-description {
+            font-size: 20px;
+            line-height: 1.8;
+            color: #555;
+        }
+
         .video-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -153,11 +160,12 @@
         </nav>
     </header>
     <div class="container">
-        <h2>Talks by Andrea Gioia</h2>
-        <p>Welcome to the talks page! Here you can find a collection of my past talks, interviews, and discussions on various topics related to data management, data product development, and much more. Feel free to explore!</p>
-        
+        <div class="page-description">
+            <p>Welcome to the talks page! Here you can find a collection of my past talks, interviews, and discussions on various topics related to data management, data product development, and much more. Feel free to explore!</p>
+        </div>
+
+        <h2>Latest Drops</h2>
         <div class="video-grid">
-           
             <div class="video-item">
                 <iframe src="https://www.youtube.com/embed/Sqi98tJNdkQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <h3>From Monolithic Knowledge Graph to Distributed Knowledge Mesh</h3>
@@ -179,7 +187,9 @@
                     <button class="play-button" onclick="window.open('https://www.youtube.com/watch?v=Sqi98tJNdkQ', '_blank')">Play on YouTube</button>
                 </div>
             </div>
-
+        </div>
+            <h2>2024 Drops</h2>
+            <div class="video-grid">
 
             <div class="video-item">
                 <iframe src="https://www.youtube.com/embed/QCE6DUWnGZ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -301,7 +311,9 @@
                     <button class="play-button" onclick="window.open('https://www.youtube.com/watch?v=Oe0mjHM2Ghw', '_blank')">Play on YouTube</button>
                 </div>
             </div>
-
+        </div>
+        <h2>2023 Drops</h2>
+        <div class="video-grid">
             <div class="video-item">
                 <iframe src="https://www.youtube.com/embed/ap8pWiRBvJQ?si=sY3nIzOepVvNDJ-9" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <h3>Semantic Data Product</h3>
