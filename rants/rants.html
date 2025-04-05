@@ -135,6 +135,12 @@
             margin-top: 10px;
         }
 
+        .rant-content p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+        }
+
         .rant-tags {
             margin-top: 10px;
             display: flex;
@@ -153,37 +159,45 @@
         .rant-media {
             margin-top: 15px;
             width: 100%;
+            display: flex;
+            justify-content: center;
+            /* Centers content horizontally */
+            align-items: center;
+            /* Centers content vertically */
         }
 
         .rant-media img,
         .rant-media iframe,
         .rant-media audio {
-            width: 100%;
+            width: 80%;
             border-radius: 5px;
+            display: block;
+            /* Ensures the image is treated as a block element */
         }
 
         .rant-resources {
-    margin-top: 15px;
-    border-radius: 5px;
-    overflow: hidden;
-    background: #eee;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-}
+            margin-top: 15px;
+            border-radius: 5px;
+            overflow: hidden;
+            background: #eee;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-.resource-header {
-    background: #ddd;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    border-radius: 5px 5px 0 0;
-    transition: background 0.3s;
-}
+        .resource-header {
+            background: #ddd;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            border-radius: 5px 5px 0 0;
+            transition: background 0.3s;
+        }
 
-.resource-header:hover {
-    background: #ccc; /* Slightly darker on hover */
-}
+        .resource-header:hover {
+            background: #ccc;
+            /* Slightly darker on hover */
+        }
 
         .rant-resources h4 {
             margin: 0;
@@ -217,7 +231,7 @@
 
         .resource-content {
             display: none;
-            padding: 10px 20px; 
+            padding: 10px 20px;
             background: #eee;
             border-radius: 0 0 5px 5px;
         }
@@ -260,19 +274,39 @@
                 <div class="rant-header">
                     <img src="../images/me.png" alt="Andrea Gioia" class="rant-image">
                     <div class="rant-title-date">
-                        <div class="rant-date">March 30, 2025</div>
-                        <div class="rant-title">The Future of AI in Everyday Life</div>
+                        <div class="rant-date">Feb 9, 2025</div>
+                        <div class="rant-title">Data Contract VS Data Product Specifications</div>
                     </div>
-                    <a href="#" class="comment-button">Join the discussion on LinkedIn</a>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7294388095066501121/"
+                        class="comment-button">Join the discussion on LinkedIn</a>
                 </div>
                 <div class="rant-content">
-                    AI is no longer the future; it is the present. But are we truly prepared for its ethical
-                    implications?
+                    <p>📚 In recent years, several specifications have emerged to define data assets managed as
+                        products. Today, two main types of specifications exist:</p>
+
+                    <p>1️⃣ <b>Data Contract Specification (DCS)</b>: Focused on describing the data asset and its
+                        associated metadata.</p>
+
+                    <p>2️⃣ <b>Data Product Specification (DPS)</b>: Focused on describing the data product that manages
+                        and exposes the data asset.</p>
+
+                    <p>👉 The <b>Open Data Contract Standard (ODCS)</b> by Bitol is an example of the first
+                        specification type, while the <b>Data Product Descriptor Specification (DPDS)</b> by the Open
+                        Data Mesh Initiative represents the second.</p>
+
+                    <p>🤔 But what are the key differences between these two approaches? Where do they overlap, and how
+                        can they complement each other? More broadly, are they friends, enemies, or frenemies?</p>
+
+                    <p>🔎 I explored these questions in my latest blog post. The image below might give away some
+                        spoilers, but if you're curious about the full reasoning, read the post.</p>
+
+                    <p>❤️ I'd love to hear your thoughts!</p>
+
                 </div>
                 <div class="rant-tags">
-                    <span class="rant-tag">AI</span>
-                    <span class="rant-tag">Technology</span>
-                    <span class="rant-tag">Future</span>
+                    <span class="rant-tag">Data Contracts</span>
+                    <span class="rant-tag">Data Products</span>
+                    <span class="rant-tag">Data Specs</span>
                 </div>
 
                 <div class="rant-media">
@@ -280,85 +314,181 @@
                 </div>
                 <div class="rant-resources">
                     <div class="resource-header">
-                        <h4>💡 Related Resources (2)</h4>
+                        <h4>💡 Related Resources (1)</h4>
                         <span class="toggle-icon">➕</span>
                     </div>
                     <ul class="resource-content">
-                        <li>📌 <a href="#">AI Ethics Report 2025</a></li>
-                        <li>📌 <a href="#">Podcast: AI and Society</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="rant">
-                <div class="rant-header">
-                    <img src="../images/me.png" alt="Andrea Gioia" class="rant-image">
-                    <div class="rant-title-date">
-                        <div class="rant-date">March 25, 2025</div>
-                        <div class="rant-title">The Myth of Work-Life Balance</div>
-                    </div>
-                    <a href="#" class="comment-button">Join the discussion on LinkedIn</a>
-                </div>
-                <div class="rant-content">
-                    We've been sold the idea that work-life balance is attainable for everyone. The reality is far more
-                    complex.
-                </div>
-                <div class="rant-tags">
-                    <span class="rant-tag">Work</span>
-                    <span class="rant-tag">Productivity</span>
-                    <span class="rant-tag">Life</span>
-                </div>
-                <div class="rant-media">
-                    <iframe width="100%" height="400" src="https://www.youtube.com/embed/example_video_id"
-                        frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="rant-resources">
-                    <div class="resource-header">
-                        <h4>💡 Related Resources (2)</h4>
-                        <span class="toggle-icon">➕</span>
-                    </div>
-                    <ul class="resource-content">
-                        <li>📌 <a href="#">AI Ethics Report 2025</a></li>
-                        <li>📌 <a href="#">Podcast: AI and Society</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="rant">
-                <div class="rant-header">
-                    <img src="../images/me.png" alt="Andrea Gioia" class="rant-image">
-                    <div class="rant-title-date">
-                        <div class="rant-date">March 20, 2025</div>
-                        <div class="rant-title">Data Privacy: Are We Losing the Battle?</div>
-                    </div>
-                    <a href="#" class="comment-button">Join the discussion on LinkedIn</a>
-                </div>
-                <div class="rant-content">
-                    Every day, companies collect more data about us. But what are they really doing with it?
-                </div>
-                <div class="rant-tags">
-                    <span class="rant-tag">Privacy</span>
-                    <span class="rant-tag">Data</span>
-                    <span class="rant-tag">Security</span>
-                </div>
-                <div class="rant-media">
-                    <audio controls>
-                        <source src="../audio/privacy_rant.mp3" type="audio/mp3">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-                <div class="rant-resources">
-                    <div class="resource-header">
-                        <h4>💡 Related Resources (2)</h4>
-                        <span class="toggle-icon">➕</span>
-                    </div>
-                    <ul class="resource-content">
-                        <li>📌 <a href="#">AI Ethics Report 2025</a></li>
-                        <li>📌 <a href="#">Podcast: AI and Society</a></li>
+                        <li>📌 <a href="../blog/2025/data_contract_vs_data_product_specifications.html">Data Contract
+                                vs. Data Product Specifications: Friends, Enemies or Frenemies?</a></li>
                     </ul>
                 </div>
             </div>
         </div>
+
+        <h2>2024 Rants</h2>
+
+        <div class="rants">
+            <div class="rant">
+                <div class="rant-header">
+                    <img src="../images/me.png" alt="Andrea Gioia" class="rant-image">
+                    <div class="rant-title-date">
+                        <div class="rant-date">Dec 6, 2024</div>
+                        <div class="rant-title">Copose to Order</div>
+                    </div>
+                    <a href="https://www.linkedin.com/posts/andreagioia_thedatajoy-dataproduct-activity-7270795370933202945-K2Ha/"
+                        class="comment-button">Join the discussion on LinkedIn</a>
+                </div>
+                <div class="rant-content">
+                    <p>🚮 In data management, creating excess "stock" is simply wasteful.</p>
+
+                    <p>👍 This holds true even when adopting a modular approach centered on managing data as a product.
+                        Too often, I see organizations measuring the success of their data initiatives by the sheer
+                        number
+                        of data products they’ve developed, regardless of whether they truly support meaningful use
+                        cases.
+                    </p>
+
+                    <p>🛑 Having data products that serve no use case is pointless. Likewise, products that mostly
+                        support just one use case are not much better—it’s a clear sign that the integration effort
+                        isn’t being
+                        reused effectively.</p>
+
+                    <p>👇 The focus should instead be on a value-driven approach: 1️⃣ Develop data products only when
+                        there’s a clear business case for them 2️⃣ Design data products to be flexible enough to support
+                        both immediate and future use cases</p>
+
+                    <p>This value-driven approach is the only way to gradually build composable data architectures where
+                        one plus one is greater than two.</p>
+                </div>
+                <div class="rant-tags">
+                    <span class="rant-tag">Data Products</span>
+                </div>
+
+                <div class="rant-media">
+                    <img src="https://github.com/andrea-gioia/TheDataJoy/raw/main/images/2024/2024-P057-compose-to-order.png"
+                        alt="Compose To Order Illustration">
+                </div>
+                <div class="rant-resources">
+                    <div class="resource-header">
+                        <h4>💡 Related Resources (2)</h4>
+                        <span class="toggle-icon">➕</span>
+                    </div>
+                    <ul class="resource-content">
+                        <li>📌 <a href="../blog/2024/what_i_talk_about_when_i_talk_about_data_product.html">What I Talk
+                                About When I Talk About Data Product</a></li>
+                        <li>📌 <a href="../book/book.html">Managing Data as a Product: Design and build
+                                data-product-centered socio-technical architectures</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="rant">
+                <div class="rant-header">
+                    <img src="../images/me.png" alt="Andrea Gioia" class="rant-image">
+                    <div class="rant-title-date">
+                        <div class="rant-date">Nov 26, 2024</div>
+                        <div class="rant-title">Covert and Overt Data Products</div>
+                    </div>
+                    <a href="https://www.linkedin.com/posts/andreagioia_thedatajoy-dataproducts-activity-7267213192324423681-eO0m/"
+                        class="comment-button">Join the discussion on LinkedIn</a>
+                </div>
+                <div class="rant-content">
+                    <p>👉 The Data Product Dichotomy</p>
+
+                    <p>👇 Data products can be divided into two categories:</p>
+
+                    <p>1️⃣ Pure Data Products, aimed at facilitating access to the data they manage,</p>
+
+                    <p>2️⃣ Analytical Data Products, designed to deliver functionality based on the data they handle.
+                    </p>
+
+                    <p>🤓 In a pure data product, the more visible and easier the data is to consume (overt data), the
+                        higher the product's value. In an analytical application, the opposite is true: the less visible
+                        the data (covert data), the more valuable the product becomes.</p>
+
+                    <p>🤔 Here’s the catch: the end user rarely needs the data. What they need are decisions supported
+                        by the data. So why does it still make sense to consider products where data is overt, like pure
+                        data products, as valuable? Can't we focus solely on products where data is covert, like
+                        analytical data products?</p>
+
+                    <p>😉 My answer is in the resources</p>
+
+                </div>
+                <div class="rant-tags">
+                    <span class="rant-tag">Data Products</span>
+                </div>
+
+                <div class="rant-media">
+                    <img src="https://github.com/andrea-gioia/TheDataJoy/raw/main/images/2024/2024-P056-covert-overt-dp.png"
+                        alt="Covert vs Overt Data Product Illustration">
+                </div>
+                <div class="rant-resources">
+                    <div class="resource-header">
+                        <h4>💡 Related Resources (2)</h4>
+                        <span class="toggle-icon">➕</span>
+                    </div>
+                    <ul class="resource-content">
+                        <li>📌 <a href="../blog/2024/what_i_talk_about_when_i_talk_about_data_product.html">What I Talk
+                                About When I Talk About Data Product</a></li>
+                        <li>📌 <a href="https://www.oreilly.com/radar/evolution-of-data-products/">The evolution of data
+                                products</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="rant">
+            <div class="rant-header">
+                <img src="../images/me.png" alt="Andrea Gioia" class="rant-image">
+                <div class="rant-title-date">
+                    <div class="rant-date">Nov 25, 2024</div>
+                    <div class="rant-title">Product Types</div>
+                </div>
+                <a href="https://www.linkedin.com/posts/andreagioia_thedatajoy-dataproducts-activity-7266764353855528960-MDK2/"
+                    class="comment-button">Join the discussion on LinkedIn</a>
+            </div>
+            <div class="rant-content">
+                <p>👉 A data product is a product that facilitates an end goal through the use of data.</p>
+
+                <p>📕 This is how DJ Patil defines a data product in his book "Data Jujitsu: The Art of Turning Data
+                    into Product."</p>
+
+                <p>🤔 While it’s a definition that makes sense, it feels rather broad—perhaps too broad to be genuinely
+                    actionable. After all, nearly every software application leverages data to deliver its
+                    functionalities. So, what truly sets a data product apart?</p>
+
+                <p>👇 In a recent blog post (link in the comments), I shared my perspective on what I mean when I talk
+                    about data products.</p>
+
+                <p>❓ Does it resonate with you? How have you defined the concept of a data product within your
+                    organization?</p>
+
+            </div>
+
+            <div class="rant-tags">
+                <span class="rant-tag">Data Products</span>
+            </div>
+
+            <div class="rant-media">
+                <img src="https://github.com/andrea-gioia/TheDataJoy/raw/main/images/2024/2024-P055-product-types.png"
+                    alt="Product Types Illustration">
+            </div>
+            <div class="rant-resources">
+                <div class="resource-header">
+                    <h4>💡 Related Resources (1)</h4>
+                    <span class="toggle-icon">➕</span>
+                </div>
+                <ul class="resource-content">
+                    <li>📌 <a href="../blog/2024/what_i_talk_about_when_i_talk_about_data_product.html">What I Talk
+                            About When I Talk About Data Product</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
     </div>
 </body>
 

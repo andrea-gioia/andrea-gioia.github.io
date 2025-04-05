@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Contract vs. Data Product Specifications - Blog Post</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #FF5722;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+        .header-image {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            cursor: pointer;
+            vertical-align: middle;
+        }
+
+        .header-title {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 20px;
+            line-height: 40px;
+            /* Ensures the text is vertically centered with the image */
+        }
+
+        .header-title a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            gap: 10px;
+            margin-left: auto;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 8px 12px;
+            text-decoration: none;
+            background: white;
+            color: #FF5722;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+            white-space: nowrap;
+        }
+
+        nav a:hover {
+            background: #FF8A65;
+            color: white;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 80px 20px 20px 20px;
+            /* Adjusted for the fixed header */
+        }
+
+        .post-title {
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            color: #FF5722;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .post-subtitle {
+            font-size: 24px;
+            font-weight: normal;
+            text-align: center;
+            color: #666;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .post-meta {
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .post-meta a {
+            color: #4e4c4c;
+        }
+
+        .post-meta a:hover {
+            color: #1e1d1d;
+        }
+
+
+        .banner-box {
+            background-color: #fae5c3;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .banner-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            object-fit: cover;
+            max-height: 400px;
+        }
+
+        .abstract-box {
+            width: 100%;
+            margin: 40px auto;
+
+            box-sizing: border-box;
+            padding: 20px;
+
+            background-color: #fae5c3;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        .abstract-box a {
+            color: #FF5722;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .abstract-box a:hover {
+            text-decoration: underline;
+        }
+
+
+        .section {
+            width: 100%;
+            margin: 40px auto;
+            box-sizing: border-box;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .section h3 {
+            color: #242120;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .section p,
+        .section ul,
+        .section ol {
+            font-size: 20px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .section a {
+            color: #FF5722;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .section a:hover {
+            background-color: #fae5c3;
+            text-decoration: none;
+        }
+
+        .section blockquote {
+            border-left: 5px solid #FF5722;
+            padding: 15px;
+            font-style: italic;
+            color: #4e4c4c;
+            background-color: #fae5c3;
+            margin: 20px;
+            line-height: 1.8;
+            font-size: 20px;
+        }
+
+        .section img {
+            width: 80%;
+            margin: 20px auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .image-caption {
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+            margin-top: 5px;
+        }
+
+        .section pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .section code {
+            font-family: monospace;
+        }
+
+        .resources-box {
+            background-color: #fae5c3;
+            width: 100%;
+            margin: 40px auto;
+
+            box-sizing: border-box;
+            padding: 20px;
+
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+
+        .resources-box {
+            list-style: none;
+        }
+
+        .resources-box a {
+            text-decoration: none;
+            color: #FF5722;
+
+        }
+
+        .resources-box a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="../../index.html">
+            <img src="../../images/me.png" alt="Andrea Gioia" class="header-image">
+        </a>
+        <div class="header-title">
+            > <a href="../blog.html">BLOG</a> / POST-25-001
+        </div>
+        <nav>
+            <a href="../../book/book.html">Book</a>
+            <a href="../../podcast/podcast.html">Podcast</a>
+            <a href="../../rants/rants.html">Rants</a>
+            <a href="../../blog/blog.html">Blog</a>
+            <a href="../../talks/talks.html">Talks</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="post-title">How to Define Internal Data Specifications to Govern Your Data Ecosystem</h1>
+        <h2 class="post-subtitle">An hands-on guide</h2>
+        <p class="post-meta">9 min read - Published on Feb 2, 2025 by <a href="../index.html">Andrea Gioia</a> on <a
+                href="https://medium.com/@andrea_gioia/how-to-define-internal-data-specifications-to-govern-your-data-ecosystem-9d59b3473dfe">Medium</a>
+        </p>
+        
+
+        <div class="banner-box">
+            <img class="banner-image" src="./images/2025-B001-Banner.png" alt="Post Banner">
+        </div>
+
+
+        <div class="abstract-box">
+            <p>In the world of data, we have plenty of specifications — but surprisingly few standards. SQL is one of
+                the rare success stories, a standard that has saved countless resources over the years thanks to its
+                interoperability. But beyond SQL, widely adopted standards are scarce, and this gap poses a major
+                challenge for the entire ecosystem.
+            </p>
+
+            <p>Why is this happening? And what can we do to change it? In my next post, I’ll explore ways to foster new
+                standards in the data space. But first, let’s take a step back. What makes a good data specification?
+                And how can you build one from scratch within your organization? In this post, I’ll break down the key
+                elements of an effective specification and share practical steps to create one.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>What Is a Specification Anyway?</h2>
+
+            <p>A specification is a formal and unambiguous description of an entity of interest, either an object or a
+                process, that provides all and only the necessary information for its design, development, and/or
+                operational use.</p>
+
+            <p>A specification can be either public or private. A public specification is considered open when its
+                evolution isn’t controlled by a single organization but is shaped by multiple organizations through
+                clear and inclusive governance rules.</p>
+
+            <p>A standard is an open specification that multiple organizations within a shared ecosystem widely adopt.
+                It is typically recognized by a standardization body that oversees its evolution through a collaborative
+                and transparent process.</p>
+
+
+            <h2>What Is a Specification Anyway?</h2>
+
+            <p>A <strong>specification</strong> is a formal and unambiguous description of an entity of interest, either
+                an object or a process, that provides all and only the necessary information for its design,
+                development, and/or operational use.</p>
+
+            <p>A specification can be either public or private. A <strong>public specification</strong> is considered
+                <strong>open</strong> when its evolution isn’t controlled by a single organization but is shaped by
+                multiple organizations through clear and inclusive governance rules.
+            </p>
+
+            <p>A <strong>standard</strong> is an open specification that multiple organizations within a shared
+                ecosystem widely adopt. It is typically recognized by a standardization body that oversees its evolution
+                through a collaborative and transparent process.</p>
+
+            <h2>Why Internal Data Specifications Matter</h2>
+
+            <p>Data specifications are fundamental to ensuring that a data solution or data product is built correctly,
+                meets expectations, and remains easy to use and maintain over time. In many ways, they represent the
+                highest form of <strong>global governance policies</strong>.</p>
+
+            <p>Their importance grows in complex data ecosystems where multiple independent entities operate in a
+                distributed manner, often with different — or even conflicting — goals. In these environments, shared
+                specifications serve as the <strong>rules of the game</strong>, imposing certain constraints on
+                individual actors in exchange for smoother collaboration and a more sustainable evolution of the entire
+                data ecosystem.</p>
+
+            <p>Even without widely accepted <strong>data standards</strong>, defining <strong>internal data
+                    specifications</strong> can be highly valuable for an organization looking to govern its
+                <strong>data ecosystem</strong> — especially when adopting a <strong>data-as-a-product</strong> paradigm
+                or embracing <strong>data mesh</strong> principles.
+            </p>
+
+            <h2>How to Get Started</h2>
+
+            <p>When defining an internal specification, the first step is to clearly understand <em>what</em> you are
+                describing and <em>why</em> it needs to be defined. Once that’s established, the next step is
+                determining who should be involved in the process.</p>
+
+            <p>Internal specifications are best developed in a <strong>collaborative</strong>, <strong>federated
+                    approach</strong>, actively involving representatives from all impacted groups rather than imposing
+                them from the top down. Even within an organization, a specification only makes sense if it is actually
+                used — and the best way to ensure adoption is to engage stakeholders in its creation.</p>
+
+            <p>Defining an internal specification doesn’t always mean starting from scratch — in fact, quite the
+                opposite. Once the <strong>what</strong> and <strong>why</strong> are clear, it’s crucial to carefully
+                consider the <strong>how</strong>. This involves assessing whether existing external specifications
+                already meet the identified requirements. While no external specification will perfectly fit every
+                organization’s needs, it’s important to weigh the <strong>trade-offs</strong> between adapting an
+                existing one and building a new specification from the ground up.</p>
+
+            <p>Once a shared decision is reached, it should be documented for future reference through a
+                <strong>governance decision record</strong>.
+            </p>
+
+            <p>If there are strong reasons not to reuse an existing specification, it’s time to move forward with
+                designing an internal <strong>custom specification</strong>. Let’s explore how.</p>
+
+            <h2>Designing Your Own Data Specification</h2>
+
+            <p>Specifications can be broadly categorized into two types, depending on the entity being described:
+                <strong>object specifications</strong> and <strong>protocol specifications</strong>.
+            </p>
+
+            <p>An <strong>object specification</strong> outlines the attributes, properties, behaviors, and constraints
+                of an object (e.g., <a href="https://dpds.opendatamesh.org/" target="_blank">Data Product Descriptor
+                    Specification</a>). A <strong>protocol specification</strong>, on the other hand, defines the rules
+                and formats that different actors must follow to communicate with one another (e.g., <a
+                    href="https://opentelemetry.io/docs/specs/otel/protocol/" target="_blank">Open Telemetry
+                    Protocol</a>).</p>
+
+            <p>In short, <strong>object specifications</strong> describe the components of a system, while
+                <strong>protocol specifications</strong> explain how these components interact.
+            </p>
+
+            <p>In this blog post, we’ll focus on defining an <strong>object specification</strong> in the data context.
+                Object specifications are simpler, something I’m quite familiar with from writing several of them, and
+                they often serve as the foundation for more complex <strong>protocol specifications</strong>.</p>
+
+            <p>An object specification should clearly and unambiguously define how to describe the object of interest.
+                In my experience, this can be achieved by defining the following three key elements in the
+                specification:</p>
+
+            <ul>
+                <li>🗺️ A Metamodel</li>
+                <li>📜 A Schema Definition Language (SDL)</li>
+                <li>📚 Schema Annotation Vocabularies</li>
+            </ul>
+
+            <p>Let’s take a closer look at each of these.</p>
+
+            <h3>🗺️ A Metamodel</h3>
+
+            <p>A <strong>metamodel</strong> is a model that defines the structure, rules, and constraints for creating
+                other models. It serves as a blueprint to outline the basic structure of the object the specification is
+                intended to describe.</p>
+
+            <p>Here is a simple metamodel that could be used in a specification designed to describe data assets with a
+                tabular structure.</p>
+
+            <img class="normal-image"
+                src="https://github.com/andrea-gioia/TheDataJoy/raw/main/blogs/2025/b001-how-to-define-internal-data-specifications/images/2025-B001-01-data-joy-spedicication-metamodel.png"
+                alt="The Data Joy Specification Metamodel">
+
+            <p>As shown in the image, a tabular data asset can be modeled using a <code>Table</code> object, which has a
+                name and a list of <code>Column</code> objects. Each <code>Column</code> object has a name and a data
+                type, which can be one of the following: <code>BOOLEAN</code>, <code>INT</code>, <code>FLOAT</code>,
+                <code>STRING</code>, or <code>DATE</code>.
+            </p>
+
+            <h3>📜 A Schema Definition Language (SDL)</h3>
+
+            <p>A <b>Schema Definition Language (SDL)</b> is a formal language used to describe a model that is
+                an instance of a specific metamodel. In other words, the metamodel defines what can be described at a
+                conceptual level, while the SDL provides practical guidelines for how to describe it.</p>
+
+            <p>The following is an example of a BNF definition for an SDL that can be used to describe an instance of
+                the metamodel for tabular data assets presented in the previous section.</p>
+
+            <pre><code>
+&lt;table_definition&gt; ::= "TABLE" &lt;table_name&gt; "{" &lt;column_definitions&gt; "}" 
+
+&lt;column_definitions&gt; ::= &lt;column_definition&gt; | &lt;column_definition&gt; "," &lt;column_definitions&gt; 
+
+&lt;column_definition&gt; ::= &lt;column_name&gt; &lt;data_type&gt;
+
+&lt;data_type&gt; ::= "INT" | "FLOAT" | "STRING" | "DATE" | "BOOLEAN" 
+
+&lt;table_name&gt; ::= &lt;identifier&gt; 
+&lt;column_name&gt; ::= &lt;identifier&gt; 
+
+&lt;identifier&gt; ::= &lt;letter&gt; &lt;identifier_tail&gt; 
+&lt;identifier_tail&gt; ::= &lt;letter_or_digit&gt; &lt;identifier_tail&gt; | ε 
+&lt;letter_or_digit&gt; ::= &lt;letter&gt; | &lt;digit&gt; 
+&lt;letter&gt; ::= "a" | "b" | ... | "z" | "A" | "B" | ... | "Z" | "_" 
+&lt;digit&gt; ::= "0" | "1" | ... | "9"
+</code></pre>
+
+            <p>The following is an example of a valid model instance described using the SDL defined above.</p>
+
+            <pre><code>
+TABLE Employees {
+    EmployeeID INT,
+    FirstName STRING,
+    LastName STRING,
+    Salary FLOAT,
+    DepartmentID INT
+}
+    </code></pre>
+
+            <p>Most specifications don’t define their own SDL but instead reuse an existing one that is expressive
+                enough to describe instances of the metamodel adopted by the specification. <a>JSON Schema</a>
+                is one of the most widely used SDLs for this purpose, thanks to its expressiveness, ease of use, and the
+                wide range of supporting tools available. The following is an example of a JSON Schema that can be used
+                to describe instances of the metamodel introduced earlier for tabular data assets.</p>
+
+            <pre><code class="language-json">
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "djs": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "pattern": "^[a-zA-Z_][a-zA-Z0-9_]*$"
+    },
+    "columns": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "pattern": "^[a-zA-Z_][a-zA-Z0-9_]*$"
+          },
+          "type": {
+            "datatype": "string",
+            "enum": ["INT", "FLOAT", "STRING", "DATE", "BOOLEAN"]
+          }
+        },
+        "required": ["name", "type"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["djs", "name", "columns"],
+  "additionalProperties": false
+}
+            </code></pre>
+
+            <p>The following is an example of a valid model instance described using the metamodel defined above and
+                formally described using the previous JSON schema.</p>
+
+            <pre><code class="language-json">
+{
+  "djs": "1.0.0",
+  "name": "Employees",
+  "columns": [
+    {
+      "name": "EmployeeID",
+      "datatype": "INT"
+    },
+    {
+      "name": "FirstName",
+      "datatype": "STRING"
+    },
+    {
+      "name": "LastName",
+      "datatype": "STRING"
+    },
+    {
+      "name": "Salary",
+      "datatype": "FLOAT"
+    },
+    {
+      "name": "DepartmentID",
+      "datatype": "INT"
+    }
+  ]
+}
+</code></pre>
+
+            <p>A JSON schema can also be used to validate model instances written in YAML. The following YAML instance
+                of the metamodel, for example, is equivalent to the previous one in JSON.</p>
+
+            <pre><code class="language-yaml">
+djs: 1.0.0
+name: Employees
+columns:
+  - name: EmployeeID
+    datatype: INT
+  - name: FirstName
+    datatype: STRING
+  - name: LastName
+    datatype: STRING
+  - name: Salary
+    datatype: FLOAT
+  - name: DepartmentID
+    datatype: INT
+</code></pre>
+
+
+
+
+            <h3>📚 Schema Annotation Vocabularies</h3>
+            <p>An <b>annotation</b> is a property that adds additional information to a model element. Each
+                annotation consists of a keyword and an associated value. The <b>keyword</b> defines the
+                meaning of the <b>value</b> used to enrich the annotated model component. The metamodel
+                specifies which components can be annotated, while the SDL defines how to add the annotations.</p>
+
+            <p>The following example demonstrates how to extend the SDL defined earlier in BNF to enable annotation of
+                the <b>TABLE</b> and <b>COLUMN</b> elements of the metamodel.</p>
+
+            <pre><code class="language-bnf">
+&lt;table_definition&gt; ::= "TABLE" &lt;table_name&gt; &lt;annotations&gt; "{" &lt;column_definitions&gt; "}"
+
+&lt;column_definitions&gt; ::= &lt;column_definition&gt; | &lt;column_definition&gt; "," &lt;column_definitions&gt;
+
+&lt;column_definition&gt; ::= &lt;column_name&gt; &lt;data_type&gt; &lt;annotations&gt;
+
+&lt;annotations&gt; ::= "[" &lt;annotation_list&gt; "]" | ε
+
+&lt;annotation_list&gt; ::= &lt;annotation&gt; | &lt;annotation&gt; "," &lt;annotation_list&gt;
+
+&lt;annotation&gt; ::= &lt;annotation_key&gt; "=" &lt;annotation_value&gt;
+
+&lt;annotation_key&gt; ::= &lt;identifier&gt;
+&lt;annotation_value&gt; ::= &lt;string_literal&gt; | &lt;number_literal&gt;
+
+&lt;data_type&gt; ::= "INT" | "FLOAT" | "STRING" | "DATE" | "BOOLEAN"
+
+&lt;table_name&gt; ::= &lt;identifier&gt;
+&lt;column_name&gt; ::= &lt;identifier&gt;
+
+&lt;identifier&gt; ::= &lt;letter&gt; &lt;identifier_tail&gt;
+&lt;identifier_tail&gt; ::= &lt;letter_or_digit&gt; &lt;identifier_tail&gt; | ε
+&lt;letter_or_digit&gt; ::= &lt;letter&gt; | &lt;digit&gt;
+&lt;letter&gt; ::= "a" | "b" | ... | "z" | "A" | "B" | ... | "Z" | "_"
+&lt;digit&gt; ::= "0" | "1" | ... | "9"
+
+&lt;string_literal&gt; ::= '"' &lt;string_content&gt; '"'
+&lt;string_content&gt; ::= &lt;character&gt; &lt;string_content&gt; | ε
+&lt;character&gt; ::= &lt;letter&gt; | &lt;digit&gt; | " " | "_" | "-" | "." | ":" | "/"
+
+&lt;number_literal&gt; ::= &lt;digit&gt; | &lt;digit&gt; &lt;number_literal&gt;
+            </code></pre>
+
+            <p>This is an example of an instance of the metamodel defined using the custom SDL based on the above BNF
+                syntax, where each element is enriched with various annotations.</p>
+
+            <pre><code class="language-sdl">
+TABLE Employees [database="hr", phisycalName="EMPL"] {
+    EmployeeID INT [phisycalName="ID", primaryKey="true"],
+    FirstName STRING [phisycalName="FNAME"],
+    LastName STRING [phisycalName="LNAME"],
+    Salary FLOAT [phisycalName="SALARY"],
+    DepartmentID INT [phisycalName="DEPID"]
+}
+            </code></pre>
+            <p>In JSON Schema, any keyword not used for validating the structure of a model instance is automatically
+                treated as an annotation. Therefore, there’s no need to extend the schema to annotate its instances, as
+                demonstrated in the following instance example.</p>
+
+            <pre><code class="language-json">
+            {
+              "djs": "1.0.0",
+            
+              "name": "Employees",
+              "database": "hr",
+              "physicalName": "EMPL",
+              "columns": [
+                {
+                  "name": "EmployeeID",
+                  "datatype": "INT",
+                  "physicalName": "ID",
+                  "primaryKey": "true"
+                },
+                {
+                  "name": "FirstName",
+                  "datatype": "STRING",
+                  "physicalName": "FNAME"
+                },
+                {
+                  "name": "LastName",
+                  "datatype": "STRING",
+                  "physicalName": "LNAME"
+                },
+                {
+                  "name": "Salary",
+                  "datatype": "FLOAT",
+                  "physicalName": "SALARY"
+                },
+                {
+                  "name": "DepartmentID",
+                  "datatype": "INT",
+                  "physicalName": "DEPID"
+                }
+              ]
+            }
+            </code></pre>
+
+            <p>Thanks to annotation, it is possible to clearly separate what in the description of the object of
+                interest is structural and what is a descriptive property. By doing this, it becomes possible to
+                describe the same object from multiple viewpoints. This makes the specification more flexible, easier to
+                extend, and compatible with other specifications. It is probably the most important takeaway I have
+                learned from writing specifications in the past couple of years.</p>
+
+            <p>To use annotations effectively, the specification must not only define the metamodel and the SDL to
+                describe it but also outline the allowable annotations and their definitions. Typically, the set of
+                keywords used to annotate a model instance, along with their domain, range, and descriptions, is called
+                a <b>vocabulary</b>.</p>
+
+            <p>A specification may group annotations into different vocabularies based on their type. For example, the
+                annotations used in the previous example could be logically organized into a vocabulary that defines all
+                the keywords related to the physical system used to store and access the data asset.</p>
+
+            <p>A vocabulary can be specified in various forms. In general, it should always include, for each keyword,
+                its meaning (description), the type of accepted value (range), and the list of model elements to which
+                it can be applied within the model instance (domain). Below is an example of a vocabulary that defines
+                the keywords used earlier.</p>
+
+            <pre><code class="language-json">
+            {
+              "vocabulary": "meta-physical",
+              "keywords": {
+                "physicalName": {
+                  "domain": ["TABLE","COLUMN"],
+                  "range": ["string"],
+                  "description": "The name of the element in the source datastore."
+                },
+                "physicalType": {
+                  "scope": ["TABLE","COLUMN"],
+                  "range": ["string"],
+                  "description": "The type of the element in the source datastore. For table object MAY be equal to TABLE, VIEW, etc ... For column object MAY be equal to VARCHAR, TINNYINT, etc..."
+                },
+                "partitionKey": {
+                  "domain": ["COLUMN"],
+                  "range": ["boolean"],
+                  "description": "When set to true, the partitionKey keyword indicates that the property is part of the dataset's partition key.",
+                  "default": false
+                }
+              }
+            }
+            </code></pre>
+
+
+            <h2>Putting it all together</h2>
+
+            <p>Once the metamodel, SDL, and supported schema annotation vocabularies are defined, the specification is
+                ready. At this point, you can collect everything into a Git repository and release the first version.
+            </p>
+
+            <p>It’s generally helpful to have a <a
+                    href="https://github.com/andrea-gioia/the-data-joy-spec/blob/main/versions/1.0.0.md"
+                    target="_blank">single normative document</a> that describes the specification. This document should
+                include a detailed description of the <a
+                    href="https://github.com/andrea-gioia/the-data-joy-spec/blob/main/versions/1.0.0.md#%EF%B8%8F-metamodel"
+                    target="_blank">metamodel</a>, the <a
+                    href="https://github.com/andrea-gioia/the-data-joy-spec/blob/main/versions/1.0.0.md#-schema"
+                    target="_blank">schema definition language</a> used to describe its instances, and supported <a
+                    href="https://github.com/andrea-gioia/the-data-joy-spec/blob/main/versions/1.0.0.md#-annotations-vocabularies"
+                    target="_blank">vocabularies</a> for annotating the structure.</p>
+
+            <p>Along with this document, it’s useful to share the <a
+                    href="https://github.com/andrea-gioia/the-data-joy-spec/blob/main/schemas/1.0.0/schema.json"
+                    target="_blank">SDL definition</a> and <a
+                    href="https://github.com/andrea-gioia/the-data-joy-spec/tree/main/examples/1.0.0"
+                    target="_blank">examples</a>. Additional documentation, such as a <a
+                    href="https://github.com/andrea-gioia/the-data-joy-spec/blob/main/docs/quickstart.md"
+                    target="_blank">quickstart guide</a> or an explanation of the core concepts the specification is
+                based on, can also be valuable.</p>
+
+            <p>At <a href="https://github.com/andrea-gioia/the-data-joy-spec" target="_blank">this link</a>, you’ll find
+                the repository used to publish and manage the evolution of the sample specification we have defined
+                together so far.</p>
+
+            <p><b>Now it’s your turn — happy specifying! 🙂</b></p>
+
+        </div>
+
+        <div class="resources-box">
+            <h2>Resources</h2>
+            <ol>
+                <li>For a deeper understanding of data contracts, I recommend <a
+                        onclick="window.open('https://a.co/d/fWBxJqU', '_blank')">Driving Data Quality with Data
+                        Contracts</a> by <b>Andrew Jones</b>.</li>
+                <li>Instead, to learn how to apply data contracts specifically within the data mesh paradigm, check out
+                    <a onclick="window.open('https://a.co/d/fWBxJqU', '_blank')">Implementing Data Mesh</a> by
+                    <b>Jean-Georges Perrin</b> and <b>Eric Broda</b>.
+                </li>
+                <li>Finally, if you’re interested in exploring pure data products, feel free to refer to my book, <a
+                        href="../../book/book.html">Managing Data as a Product<a> 😀</li>
+
+            </ol>
+        </div>
+
+    </div>
+</body>
+
+</html>

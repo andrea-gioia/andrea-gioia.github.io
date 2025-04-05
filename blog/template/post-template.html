@@ -27,6 +27,7 @@
             z-index: 1000;
             box-sizing: border-box;
         }
+
         .header-image {
             width: 40px;
             height: 40px;
@@ -35,22 +36,27 @@
             cursor: pointer;
             vertical-align: middle;
         }
+
         .header-title {
             color: white;
             font-size: 24px;
             font-weight: bold;
             margin-left: 20px;
-            line-height: 40px; /* Ensures the text is vertically centered with the image */
+            line-height: 40px;
+            /* Ensures the text is vertically centered with the image */
         }
+
         .header-title a {
             text-decoration: none;
             color: white;
         }
+
         nav {
             display: flex;
             gap: 10px;
             margin-left: auto;
         }
+
         nav a {
             display: inline-block;
             padding: 8px 12px;
@@ -61,6 +67,7 @@
             transition: background 0.3s, color 0.3s;
             white-space: nowrap;
         }
+
         nav a:hover {
             background: #FF8A65;
             color: white;
@@ -69,17 +76,20 @@
         .container {
             width: 90%;
             max-width: 1000px;
-            margin: auto;
-            padding: 80px 20px 20px 20px; /* Adjusted for the fixed header */
+            margin: 20px auto;
+            padding: 80px 20px 20px 20px;
+            /* Adjusted for the fixed header */
         }
-        
+
         .post-title {
             font-size: 32px;
             font-weight: bold;
             text-align: center;
             color: #FF5722;
             margin-top: 20px;
+            width: 100%;
         }
+
         .post-subtitle {
             font-size: 24px;
             font-weight: normal;
@@ -87,35 +97,63 @@
             color: #666;
             margin-top: 10px;
             margin-bottom: 20px;
+            width: 100%;
         }
+
         .post-meta {
             text-align: center;
             font-size: 14px;
             color: #777;
             margin-bottom: 20px;
+            width: 100%;
         }
+
         .abstract-box {
-            background-color: #FFE0B2;
+            width: 100%;
+            margin: 40px auto;
+
+            box-sizing: border-box; 
             padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 40px;
-            font-size: 16px;
-        }
-        .post-content {
+
+            background-color: #fae5c3;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
             line-height: 1.8;
             font-size: 18px;
-            padding: 0 40px;
         }
+
+        .post-content {
+            width: 100%;
+            margin: 40px auto;
+
+            box-sizing: border-box; 
+            padding: 20px;
+
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
         blockquote {
             border-left: 5px solid #FF5722;
-            padding-left: 15px;
+            padding: 15px;
             font-style: italic;
-            color: #555;
-            margin: 20px 0;
+            color: #4e4c4c;
+            background-color: #fae5c3;
+            margin: 20px;
+            line-height: 1.8;
+            font-size: 20px;
         }
-        ul, ol {
+
+        ul,
+        ol {
             padding-left: 20px;
         }
+
         pre {
             background: #2d2d2d;
             color: #f8f8f2;
@@ -123,51 +161,66 @@
             border-radius: 5px;
             overflow-x: auto;
         }
+
         code {
             font-family: monospace;
         }
+
         .resources-box {
-            background-color: #FF5722;
-            padding: 25px;
-            border-radius: 10px;
-            margin-top: 40px;
-            color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fae5c3;
+            width: 100%;
+            margin: 40px auto;
+
+            box-sizing: border-box; 
+            padding: 20px;
+            
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            line-height: 1.8;
+            font-size: 18px;
         }
-        .resources-box h3 {
-            font-size: 22px;
-            margin-bottom: 20px;
-        }
-        .resources-box ul {
+
+
+        .resources-box ul li {
             padding: 0;
             list-style: none;
-            color: white;
         }
-        .resources-box ul li {
-            margin-bottom: 10px;
-        }
+
         .resources-box ul li a {
             text-decoration: none;
-            color: #FFF;
-            font-weight: bold;
+            color: #4e4c4c;
+
         }
+
         .resources-box ul li a:hover {
             text-decoration: underline;
         }
+
+        .post-image-container {
+            background-color: #fae5c3;
+            width: 100%;
+            box-sizing: border-box; 
+            padding: 0px;          
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
         .post-image {
             width: 100%;
             height: auto;
+            display: block;
             border-radius: 8px;
             object-fit: cover;
             max-height: 400px;
-            margin-bottom: 30px; /* Increased space */
         }
+
         .normal-image {
             width: 80%;
             margin: 20px auto;
             display: block;
             border-radius: 8px;
         }
+
         .image-caption {
             text-align: center;
             font-size: 14px;
@@ -178,18 +231,18 @@
 </head>
 <body>
     <header>
-        <a href="../index.html">
-            <img src="../images/me.png" alt="Andrea Gioia" class="header-image">
+        <a href="../../index.html">
+            <img src="../../images/me.png" alt="Andrea Gioia" class="header-image">
         </a>
         <div class="header-title">
-            > <a href="blog.html">BLOG</a> / POST-25-001
+            > <a href="../blog.html">BLOG</a> / POST-25-001
         </div>
         <nav>
-            <a href="../book/book.html">Book</a>
-            <a href="../podcast/podcast.html">Podcast</a>
-            <a href="../rants/rants.html">Rants</a>
-            <a href="../blog/blog.html">Blog</a>
-            <a href="../talks/talks.html">Talks</a>
+            <a href="../../blog/">Book</a>
+            <a href="../../podcast/podcast.html">Podcast</a>
+            <a href="../../rants/rants.html">Rants</a>
+            <a href="../../blog/blog.html">Blog</a>
+            <a href="../../talks/talks.html">Talks</a>
         </nav>
     </header>
     
@@ -198,8 +251,9 @@
         <h2 class="post-subtitle">How AI is transforming our world</h2>
         <p class="post-meta">Published on March 29, 2025 by John Doe</p>
         
-        <!-- Banner Image -->
-        <img class="post-image" src="blog-001.jpeg" alt="AI Image">
+        <div class="post-image-container">
+        <img class="post-image" src="./images/20xx-B001-Banner.jpeg" alt="Post Banner">
+        </div>
         
         <!-- Abstract Box moved after Image with added space -->
         <div class="abstract-box">
@@ -242,20 +296,20 @@
             <p>Despite its advantages, AI also comes with challenges. Ethical concerns such as <i>data privacy</i>, bias in decision-making, and job displacement are hot topics in AI discussions. It is essential to create regulations and guidelines to ensure AI is used responsibly.</p>
 
             <!-- Additional Image in the Post -->
-            <img class="normal-image" src="2025-B001-b008-dpds-with-odcs.png" alt="AI Example Image">
+            <img class="normal-image" src="./images/20xx-B001-b008-dpds-with-odcs.png" alt="AI Example Image">
             <div class="image-caption">Example of AI processing data</div>
             
             <h2>Conclusion</h2>
             <p>Artificial Intelligence is here to stay. As we continue to innovate, we must also address the challenges and ethical concerns to ensure that AI benefits society as a whole.</p>
-            
-            <div class="resources-box">
-                <h3>Resources</h3>
-                <ul>
-                    <li><a href="#">Introduction to AI - Online Course</a></li>
-                    <li><a href="#">Ethics in AI - Research Paper</a></li>
-                    <li><a href="#">Machine Learning Basics - Blog Post</a></li>
-                </ul>
-            </div>
+        </div>
+
+        <div class="resources-box">
+            <h3>Resources</h3>
+            <ul>
+                <li><a href="#">Introduction to AI - Online Course</a></li>
+                <li><a href="#">Ethics in AI - Research Paper</a></li>
+                <li><a href="#">Machine Learning Basics - Blog Post</a></li>
+            </ul>
         </div>
     </div>
 </body>
