@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Podcast - The Data Joy</title>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -19,6 +23,7 @@
             color: white;
             display: flex;
             align-items: center;
+            justify-content: space-between;
             padding: 15px 20px;
             position: fixed;
             top: 0;
@@ -27,6 +32,17 @@
             z-index: 1000;
             box-sizing: border-box;
         }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            min-width: 0;
+            /* Allow shrinking */
+            overflow: hidden;
+            /* Prevent overflow */
+        }
+
         .header-image {
             width: 40px;
             height: 40px;
@@ -34,23 +50,37 @@
             object-fit: cover;
             cursor: pointer;
             vertical-align: middle;
+            flex-shrink: 0;
+            /* Prevent image from shrinking */
         }
+
         .header-title {
             color: white;
             font-size: 24px;
             font-weight: bold;
             margin-left: 20px;
-            line-height: 40px; /* Ensures the text is vertically centered with the image */
+            line-height: 40px;
+            /* Ensures the text is vertically centered with the image */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /* Add ellipsis when text overflows */
         }
+
         .header-title a {
             text-decoration: none;
             color: white;
         }
+
         nav {
             display: flex;
             gap: 10px;
-            margin-left: auto;
+            margin-left: 20px;
+            /* Add spacing between title and nav */
+            flex-shrink: 0;
+            /* Prevent nav from shrinking */
         }
+
         nav a {
             display: inline-block;
             padding: 8px 12px;
@@ -60,12 +90,98 @@
             border-radius: 5px;
             transition: background 0.3s, color 0.3s;
             white-space: nowrap;
+            box-sizing: border-box;
+            border: none;
         }
+
         nav a:hover {
             background: #FF8A65;
             color: white;
         }
 
+        /* Hamburger menu for mobile */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: white;
+            flex-shrink: 0;
+            /* Prevent toggle from shrinking */
+        }
+
+        /* Media query for responsive design */
+        @media screen and (max-width: 768px) {
+            header {
+                position: fixed;
+                flex-wrap: wrap;
+            }
+
+            .header-left {
+                flex: 1;
+                min-width: 0;
+                max-width: calc(100% - 50px);
+                /* Make room for menu toggle */
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                margin-top: 15px;
+                margin-left: 0; /* Reset margin-left for mobile */
+                padding: 0 20px; /* Add horizontal padding to contain buttons */
+                order: 3;
+                box-sizing: border-box;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            nav a {
+                width: auto; /* Use auto instead of 100% */
+                margin: 5px 0;
+                padding: 8px 12px;
+                text-align: center;
+                box-sizing: border-box;
+                border-radius: 5px;
+            }
+        }
+
+        /* Additional media query for very small screens */
+        @media screen and (max-width: 480px) {
+            .header-left {
+                max-width: calc(100% - 40px);
+                /* Make room for menu toggle */
+            }
+
+            .header-title {
+                font-size: 20px;
+                margin-left: 10px;
+                max-width: calc(100% - 50px);
+                /* Ensure title doesn't push menu toggle off screen */
+            }
+
+            .menu-toggle {
+                margin-left: 5px;
+                /* Add a small gap between title and menu toggle */
+            }
+
+            nav {
+                padding: 0 20px; /* Maintain horizontal padding on smaller screens */
+            }
+
+            nav a {
+                padding: 6px 10px;
+                font-size: 14px;
+            }
+        }
+        
+     
         .container {
             width: 90%;
             max-width: 1000px;
@@ -148,12 +264,15 @@
 </head>
 <body>
     <header>
-        <a href="../index.html">
-            <img src="../images/me.png" alt="Andrea Gioia" class="header-image">
-        </a>
-        <div class="header-title">
-            > PODCAST
+        <div class="header-left">
+            <a href="../index.html">
+                <img src="../images/me.png" alt="Andrea Gioia" class="header-image">
+            </a>
+            <div class="header-title">
+                > BOOK
+            </div>
         </div>
+        <div class="menu-toggle">☰</div>
         <nav>
             <a href="../book/book.html">Book</a>
             <a href="../podcast/podcast.html">Podcast</a>
@@ -238,5 +357,24 @@
             </a>
         </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Menu toggle functionality
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav');
+            const container = document.querySelector('.container');
+
+            menuToggle.addEventListener('click', function () {
+                nav.classList.toggle('active');
+
+                // Adjust container padding when menu is expanded
+                if (nav.classList.contains('active')) {
+                    container.classList.add('menu-expanded');
+                } else {
+                    container.classList.remove('menu-expanded');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

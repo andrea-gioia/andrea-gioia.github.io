@@ -27,17 +27,31 @@
             width: 100%;
             z-index: 1000;
             box-sizing: border-box;
+            flex-wrap: nowrap;
+            height: auto;
         }
+        
+        .header-title {
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; /* Aggiunge i puntini di sospensione */
+            margin-right: 40px; /* Spazio per il menu-toggle */
+        }
+        
         .header-title a {
             text-decoration: none;
             color: white;
             font-size: 24px;
             font-weight: bold;
         }
+        
         nav {
             display: flex;
             gap: 10px;
+            flex-wrap: wrap;
         }
+        
         nav a {
             display: inline-block;
             padding: 8px 12px;
@@ -47,50 +61,102 @@
             border-radius: 5px;
             transition: background 0.3s, color 0.3s;
             white-space: nowrap;
+            margin-bottom: 5px;
         }
+        
         nav a:hover {
             background: #FF8A65;
             color: white;
+        }
+        
+        /* Hamburger menu for mobile */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: white;
+        }
+
+        /* Media query for responsive design */
+        @media screen and (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                z-index: 1001; /* Assicura che sia sopra tutto */
+                position: absolute;
+                top: 15px;
+                right: 20px;
+            }
+            
+            nav {
+                width: 100%;
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            nav a {
+                width: 100%;
+                text-align: center;
+                box-sizing: border-box;
+            }
+            
+            nav.collapsed {
+                display: none;
+            }
+        }
+
+        /* Additional media query for very small screens */
+        @media screen and (max-width: 480px) {
+            .header-title a {
+                font-size: 20px;
+            }
+            
+            nav a {
+                padding: 6px 10px;
+                font-size: 14px;
+            }
         }
 
         .container {
             width: 90%;
             max-width: 1000px;
-            margin: 20px auto;
-            padding: 80px 20px 20px 20px; /* Adjusted for the fixed header */
+            margin: 0 auto;
+            padding: 0 20px; /* Rimosso il padding top che verrà impostato da JavaScript */
         }
+
+        /* Non abbiamo più bisogno di queste media query specifiche per il padding-top */
+        /* poiché lo gestiremo con JavaScript */
 
         img {
             width: 240px;
             height: 240px;
             border-radius: 50%;
             display: block;
-            margin: 10px auto 10px auto;
+            margin: 0 auto 35px auto; /* Spazio costante di 35px sotto l'immagine */
         }
 
-        .intro {
+        /* Classe comune per tutti i contenitori con stile simile */
+        .content-box {
             width: 100%;
-            margin: 40px auto;
+            margin: 0 auto 40px auto; /* Modificato per avere solo margine inferiore */
             padding: 20px;
             background: white;
             border-radius: 15px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box; /* Garantisce che padding non si aggiunga alla larghezza */
         }
+
+        .intro {
+            /* Eredita tutte le proprietà di content-box */
+        }
+        
         .intro p {
             font-size: 20px;
             line-height: 1.8;
             color: #555;
         }
        
-
         .section {
-            width: 100%;
-            margin: 40px auto;
-            box-sizing: border-box; 
-            padding: 20px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            /* Eredita tutte le proprietà di content-box */
         }
 
         .section h2 {
@@ -118,12 +184,30 @@
             background-color: #FFDDC1;
             text-decoration: none;
         }
+
+        /* Make images responsive */
+        @media screen and (max-width: 480px) {
+            img {
+                width: 180px;
+                height: 180px;
+                margin: 0 auto 35px auto; /* Mantenuto lo spazio costante di 35px anche nei dispositivi piccoli */
+            }
+            
+            .intro p, .section p, .section li {
+                font-size: 16px;
+            }
+            
+            /* Non abbiamo più bisogno di questo perché il padding-top è gestito da JavaScript */
+        }
+        /* Utilizziamo JavaScript per garantire lo spazio corretto */
+        /* Script aggiunto alla fine del body */
     </style>
 </head>
 <body>
-    <header>
+    <header id="siteHeader">
         <div class="header-title"><a href="index.html">ANDREA GIOIA</a></div>
-        <nav>
+        <div class="menu-toggle">☰</div>
+        <nav class="collapsed">
             <a href="book/book.html">Book</a>
             <a href="podcast/podcast.html">Podcast</a>
             <a href="rants/rants.html">Rants</a>
@@ -132,9 +216,10 @@
         </nav>
     </header>
 
-    <div class="container">
-        <img src="images/me.png" alt="My Photo">
-        <div class="intro">
+    <div class="container" id="mainContainer">
+        <img src="images/me.png" alt="My Photo" id="profileImage">
+        
+        <div class="content-box intro">
             <h1>Hi there 👋</h1>
             <p>I'm Andrea Gioia, CTO at <a href="https://www.quantyca.it/">Quantyca</a>, and Co-founder of <a href="https://blindata.io/">blindata.io</a>. With 20+ years in the game, I have navigated the data universe up and down, one project at a time.</p>
             <p>📙 Author of the book <a href="https://a.co/d/452Qkih">Managing Data As A Product</a>, published by Packt in 2024.</p>
@@ -144,7 +229,8 @@
             <p>🌐 Member of <a href="https://www.dama.org/cpages/home">DAMA</a> and part of the scientific committee of the <a href="https://dama-italy.org/">DAMA Italian Chapter</a> since 2023.</p>
             <p>📫 You can reach me on <a href="https://www.linkedin.com/in/andreagioia/">LinkedIn</a>.</p>
         </div>
-        <div class="section">
+
+        <div class="content-box section">
             <h2>Here, there and everywhere</h2>
             <ul>
                 <li><a href="https://a.co/d/31c7Odt" target="_blank" rel="noopener noreferrer">Book</a></li>
@@ -153,7 +239,8 @@
                 <li><a href="https://buymeacoffee.com/thedatajoy" target="_blank" rel="noopener noreferrer">Just in case ...</a></li>
             </ul>
         </div>
-        <div class="section">
+
+        <div class="content-box section">
             <h2>My feed</h2>
             <h3>Upcoming stuff</h3>
             <ol>
@@ -186,15 +273,49 @@
             </ol>
             <h3>2023 stuff</h3>
             <ol>
-                <li>🎥 <a href="https://dama-italy.org/diac-2023/">Il ruolo del data management nell’era dell’AI Generativa</a> @ DAMA Italy Annual Convention; 2023 🇮🇹</li>
+                <li>🎥 <a href="https://dama-italy.org/diac-2023/">Il ruolo del data management nell'era dell'AI Generativa</a> @ DAMA Italy Annual Convention; 2023 🇮🇹</li>
                 <li>📝 <a href="https://online.pubhtml5.com/vbdo/kkbl/#p=25">LLMs e Knowledge Graphs: un matrimonio perfetto</a> @ AgileItalia Magazine; 2023 🇮🇹</li>
                 <li>🎥 <a href="https://www.youtube.com/watch?v=ap8pWiRBvJQ">Semantic Data Product</a> @ Big Data LND; 2023 🇬🇧</li>
                 <li>🎥 <a href="https://www.youtube.com/watch?v=CKqSNn-7wiw">Data contract in practice</a> @ Data Innovation Summit 2023 🇬🇧</li>
                 <li>📝 <a href="https://medium.com/better-programming/data-contracts-in-practice-93e58d324f34">Data contract in practice</a> @ Medium; 2023 🇬🇧</li>
-                <li>📝 <a href="https://online.pubhtml5.com/vbdo/avys/#p=38">Dalla sperimentazione alla produzione con l’MLOps</a> @ AgileItalia Magazine; 2022 🇮🇹</li>
+                <li>📝 <a href="https://online.pubhtml5.com/vbdo/avys/#p=38">Dalla sperimentazione alla produzione con l'MLOps</a> @ AgileItalia Magazine; 2022 🇮🇹</li>
                 <li>📝 <a href="https://online.pubhtml5.com/vbdo/kslm/#p=34">Il Data Mesh e l'innovazione nel data management</a> @ AgileItalia Magazine; 2019 🇮🇹</li>
             </ol>
         </div>
     </div>
+    
+    <script>
+        // Funzione per aggiustare lo spazio tra header e immagine
+        function adjustHeaderSpace() {
+            const header = document.getElementById('siteHeader');
+            const container = document.getElementById('mainContainer');
+            const headerHeight = header.offsetHeight;
+            const desiredSpace = 35; // Lo spazio desiderato in pixel
+            
+            // Aggiorna il padding-top del container
+            container.style.paddingTop = (headerHeight + desiredSpace) + 'px';
+            
+            // Gestione del menu in modalità mobile
+            if (window.innerWidth <= 768) {
+                // Se il menu non è collassato, regola il nav
+                if (!document.querySelector('nav').classList.contains('collapsed')) {
+                    document.querySelector('nav').style.paddingTop = '50px';
+                }
+            }
+        }
+        
+        // Esegui all'avvio
+        window.addEventListener('load', adjustHeaderSpace);
+        
+        // Esegui al ridimensionamento della finestra
+        window.addEventListener('resize', adjustHeaderSpace);
+        
+        // Toggle per il menu mobile
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('collapsed');
+            // Ricalcola lo spazio dopo il toggle del menu
+            setTimeout(adjustHeaderSpace, 10);
+        });
+    </script>
 </body>
 </html>
