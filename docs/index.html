@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>The Data Joy</title>
-    
+
+    <!-- Meta tag SEO principali -->
+    <meta name="description"
+        content="Andrea Gioia è CTO di Quantyca, co-founder di blindata.io e autore del libro 'Managing Data As A Product'. Esperto di data management con oltre 20 anni di esperienza.">
+    <meta name="keywords"
+        content="Andrea Gioia, data management, data product, data engineering, data mesh, open data mesh, Quantyca, blindata.io">
+    <meta name="author" content="Andrea Gioia">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.yourdomain.com/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yourdomain.com/">
+    <meta property="og:title" content="Andrea Gioia - CTO, Autore e Esperto di Data Management">
+    <meta property="og:description"
+        content="Andrea Gioia è CTO di Quantyca, co-founder di blindata.io e autore del libro 'Managing Data As A Product'. Esperto di data management con oltre 20 anni di esperienza.">
+    <meta property="og:image" content="https://www.yourdomain.com/images/me.png">
+
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -35,28 +53,30 @@
             flex-wrap: nowrap;
             height: auto;
         }
-        
+
         .header-title {
             flex: 1;
             white-space: nowrap;
             overflow: hidden;
-            text-overflow: ellipsis; /* Aggiunge i puntini di sospensione */
-            margin-right: 40px; /* Spazio per il menu-toggle */
+            text-overflow: ellipsis;
+            /* Aggiunge i puntini di sospensione */
+            margin-right: 40px;
+            /* Spazio per il menu-toggle */
         }
-        
+
         .header-title a {
             text-decoration: none;
             color: white;
             font-size: 24px;
             font-weight: bold;
         }
-        
+
         nav {
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
         }
-        
+
         nav a {
             display: inline-block;
             padding: 8px 12px;
@@ -68,12 +88,12 @@
             white-space: nowrap;
             margin-bottom: 5px;
         }
-        
+
         nav a:hover {
             background: #FF8A65;
             color: white;
         }
-        
+
         /* Hamburger menu for mobile */
         .menu-toggle {
             display: none;
@@ -86,24 +106,25 @@
         @media screen and (max-width: 768px) {
             .menu-toggle {
                 display: block;
-                z-index: 1001; /* Assicura che sia sopra tutto */
+                z-index: 1001;
+                /* Assicura che sia sopra tutto */
                 position: absolute;
                 top: 15px;
                 right: 20px;
             }
-            
+
             nav {
                 width: 100%;
                 flex-direction: column;
                 gap: 5px;
             }
-            
+
             nav a {
                 width: 100%;
                 text-align: center;
                 box-sizing: border-box;
             }
-            
+
             nav.collapsed {
                 display: none;
             }
@@ -114,7 +135,7 @@
             .header-title a {
                 font-size: 20px;
             }
-            
+
             nav a {
                 padding: 6px 10px;
                 font-size: 14px;
@@ -125,7 +146,8 @@
             width: 90%;
             max-width: 1000px;
             margin: 0 auto;
-            padding: 0 20px; /* Rimosso il padding top che verrà impostato da JavaScript */
+            padding: 0 20px;
+            /* Rimosso il padding top che verrà impostato da JavaScript */
         }
 
         /* Non abbiamo più bisogno di queste media query specifiche per il padding-top */
@@ -136,56 +158,57 @@
             height: 240px;
             border-radius: 50%;
             display: block;
-            margin: 0 auto 35px auto; /* Spazio costante di 35px sotto l'immagine */
+            margin: 0 auto 35px auto;
+            /* Spazio costante di 35px sotto l'immagine */
         }
 
         /* Classe comune per tutti i contenitori con stile simile */
         .content-box {
             width: 100%;
-            margin: 0 auto 40px auto; /* Modificato per avere solo margine inferiore */
+            margin: 0 auto 40px auto;
+            /* Modificato per avere solo margine inferiore */
             padding: 20px;
             background: white;
             border-radius: 15px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            box-sizing: border-box; /* Garantisce che padding non si aggiunga alla larghezza */
+            box-sizing: border-box;
+            /* Garantisce che padding non si aggiunga alla larghezza */
         }
 
-        .intro {
-            /* Eredita tutte le proprietà di content-box */
-        }
-        
         .intro p {
             font-size: 20px;
             line-height: 1.8;
             color: #555;
-        }
-       
-        .section {
-            /* Eredita tutte le proprietà di content-box */
         }
 
         .section h2 {
             font-size: 26px;
             font-weight: bold;
         }
+
         .section h3 {
             color: #242120;
             font-size: 22px;
             font-weight: bold;
         }
 
-        .section p, .section li {
+        .section p,
+        .section li {
             font-size: 20px;
             line-height: 1.8;
             color: #555;
         }
-        .section a, .intro a {
+
+        .section a,
+        .intro a {
             color: #FF5722;
             text-decoration: none;
             /* font-weight: bold; */
             transition: background 0.3s;
         }
-        .section a:hover, .intro a:hover {
+
+        .section a:hover,
+        .intro a:hover {
             background-color: #FFDDC1;
             text-decoration: none;
         }
@@ -195,19 +218,24 @@
             img {
                 width: 180px;
                 height: 180px;
-                margin: 0 auto 35px auto; /* Mantenuto lo spazio costante di 35px anche nei dispositivi piccoli */
+                margin: 0 auto 35px auto;
+                /* Mantenuto lo spazio costante di 35px anche nei dispositivi piccoli */
             }
-            
-            .intro p, .section p, .section li {
+
+            .intro p,
+            .section p,
+            .section li {
                 font-size: 16px;
             }
-            
+
             /* Non abbiamo più bisogno di questo perché il padding-top è gestito da JavaScript */
         }
+
         /* Utilizziamo JavaScript per garantire lo spazio corretto */
         /* Script aggiunto alla fine del body */
     </style>
 </head>
+
 <body>
     <header id="siteHeader">
         <div class="header-title"><a href="index.html">ANDREA GIOIA</a></div>
@@ -223,15 +251,23 @@
 
     <div class="container" id="mainContainer">
         <img src="images/me.png" alt="My Photo" id="profileImage">
-        
+
         <div class="content-box intro">
             <h1>Hi there 👋</h1>
-            <p>I'm Andrea Gioia, CTO at <a href="https://www.quantyca.it/">Quantyca</a>, and Co-founder of <a href="https://blindata.io/">blindata.io</a>. With 20+ years in the game, I have navigated the data universe up and down, one project at a time.</p>
-            <p>📙 Author of the book <a href="https://a.co/d/452Qkih">Managing Data As A Product</a>, published by Packt in 2024.</p>
-            <p>🚀 Proudly steering the ship at the <a href="https://www.meetup.com/it-IT/data-engineering-italy/">Data Engineering Italy Meetup</a> and championing the <a href="https://initiative.opendatamesh.org/">Open Data Mesh Initiative</a>.</p>
-            <p>🟠 Maintainer of the <a href="https://dpds.opendatamesh.org/">data product descriptor specification</a> and product owner of the open-source <a href="https://github.com/opendatamesh-initiative/odm-platform">ODM Platform</a>.</p>
+            <p>I'm Andrea Gioia, CTO at <a href="https://www.quantyca.it/">Quantyca</a>, and Co-founder of <a
+                    href="https://blindata.io/">blindata.io</a>. With 20+ years in the game, I have navigated the data
+                universe up and down, one project at a time.</p>
+            <p>📙 Author of the book <a href="https://a.co/d/452Qkih">Managing Data As A Product</a>, published by Packt
+                in 2024.</p>
+            <p>🚀 Proudly steering the ship at the <a href="https://www.meetup.com/it-IT/data-engineering-italy/">Data
+                    Engineering Italy Meetup</a> and championing the <a href="https://initiative.opendatamesh.org/">Open
+                    Data Mesh Initiative</a>.</p>
+            <p>🟠 Maintainer of the <a href="https://dpds.opendatamesh.org/">data product descriptor specification</a>
+                and product owner of the open-source <a
+                    href="https://github.com/opendatamesh-initiative/odm-platform">ODM Platform</a>.</p>
             <p>🛠️ Contributor of <a href="https://ekgf.github.io/dprod/">Data Product Ontology (DPROD)</a>.</p>
-            <p>🌐 Member of <a href="https://www.dama.org/cpages/home">DAMA</a> and part of the scientific committee of the <a href="https://dama-italy.org/">DAMA Italian Chapter</a> since 2023.</p>
+            <p>🌐 Member of <a href="https://www.dama.org/cpages/home">DAMA</a> and part of the scientific committee of
+                the <a href="https://dama-italy.org/">DAMA Italian Chapter</a> since 2023.</p>
             <p>📫 You can reach me on <a href="https://www.linkedin.com/in/andreagioia/">LinkedIn</a>.</p>
         </div>
 
@@ -239,9 +275,12 @@
             <h2>Here, there and everywhere</h2>
             <ul>
                 <li><a href="https://a.co/d/31c7Odt" target="_blank" rel="noopener noreferrer">Book</a></li>
-                <li><a href="https://speakerdeck.com/angioia" target="_blank" rel="noopener noreferrer">Slide decks</a></li>
-                <li><a href="https://www.youtube.com/watch?v=CKqSNn-7wiw&list=PL-JWvH0Ma-AgLPeixBN6ZHOM94AoYr_pt" target="_blank" rel="noopener noreferrer">Talk recordings</a></li>
-                <li><a href="https://buymeacoffee.com/thedatajoy" target="_blank" rel="noopener noreferrer">Just in case ...</a></li>
+                <li><a href="https://speakerdeck.com/angioia" target="_blank" rel="noopener noreferrer">Slide decks</a>
+                </li>
+                <li><a href="https://www.youtube.com/watch?v=CKqSNn-7wiw&list=PL-JWvH0Ma-AgLPeixBN6ZHOM94AoYr_pt"
+                        target="_blank" rel="noopener noreferrer">Talk recordings</a></li>
+                <li><a href="https://buymeacoffee.com/thedatajoy" target="_blank" rel="noopener noreferrer">Just in case
+                        ...</a></li>
             </ul>
         </div>
 
@@ -249,46 +288,76 @@
             <h2>My feed</h2>
             <h3>Upcoming stuff</h3>
             <ol>
-                <li><a href="https://datainnovationsummit.com/">Data Innovation Summit</a> @ Stockholm; May 2025 🇬🇧</li>
+                <li><a href="https://datainnovationsummit.com/">Data Innovation Summit</a> @ Stockholm; May 2025 🇬🇧
+                </li>
                 <li><a href="https://2025.datameshlive.com/">Data Mesh Live</a> @ Antwerp; June 2025 🇬🇧</li>
                 <li><a href="https://www.bigdataldn.com/">Big Data London</a> @ London; September 2025 🇬🇧</li>
             </ol>
             <h3>Recent stuff</h3>
             <ol>
-                <li>🎥 <a href="https://www.linkedin.com/events/damaitalybookclub-managingdataa7298302218586275841/comments">Managing Data as a Product</a> @ DAMA Italy Book Club; March 2025 🇮🇹</li>
-                <li>🎥 <a href="https://www.youtube.com/watch?v=Sqi98tJNdkQ">From Monolithic Knowledge Graph to Distributed Knowledge Mesh</a> @ ESTES PARK GROUP; March 2025 🇬🇧</li>
-                <li>📝 <a href="https://medium.com/@andrea_gioia/data-contract-vs-data-product-specifications-8ffa3cc16725">Data Contract vs. Data Product Specifications: Friends, Enemies, or Frenemies?</a> @ Medium Blog</li>
-                <li>📝 <a href="https://medium.com/@andrea_gioia/how-to-define-internal-data-specifications-to-govern-your-data-ecosystem-9d59b3473dfe">How to Define Internal Data Specifications to Govern Your Data Ecosystem</a> @ Medium Blog</li>
-                <li>🎥 <a href="https://youtu.be/_12MjtLCJnQ?si=42Y93qfhOTLyC01e">What's Data Product</a> @ Lets Talk About Data‬ Podcast 2025 🇬🇧</li>
+                <li>🎥 <a
+                        href="https://www.linkedin.com/events/damaitalybookclub-managingdataa7298302218586275841/comments">Managing
+                        Data as a Product</a> @ DAMA Italy Book Club; March 2025 🇮🇹</li>
+                <li>🎥 <a href="https://www.youtube.com/watch?v=Sqi98tJNdkQ">From Monolithic Knowledge Graph to
+                        Distributed Knowledge Mesh</a> @ ESTES PARK GROUP; March 2025 🇬🇧</li>
+                <li>📝 <a
+                        href="https://medium.com/@andrea_gioia/data-contract-vs-data-product-specifications-8ffa3cc16725">Data
+                        Contract vs. Data Product Specifications: Friends, Enemies, or Frenemies?</a> @ Medium Blog</li>
+                <li>📝 <a
+                        href="https://medium.com/@andrea_gioia/how-to-define-internal-data-specifications-to-govern-your-data-ecosystem-9d59b3473dfe">How
+                        to Define Internal Data Specifications to Govern Your Data Ecosystem</a> @ Medium Blog</li>
+                <li>🎥 <a href="https://youtu.be/_12MjtLCJnQ?si=42Y93qfhOTLyC01e">What's Data Product</a> @ Lets Talk
+                    About Data‬ Podcast 2025 🇬🇧</li>
             </ol>
             <h3>2024 stuff</h3>
             <ol>
-                <li>🎥 <a href="https://www.youtube.com/watch?v=QCE6DUWnGZ4">Special Episode: Managing Data as a Product "The Book"</a> @ Tapas And Pretzels Podcast 2024 🇬🇧</li>
-                <li>📝 <a href="https://medium.com/p/19faa223f91b">What I Talk About When I Talk About Data Product</a> @ Medium Blog</li>
-                <li>📙 <a href="https://github.com/PacktPublishing/Managing-Data-as-a-Product/tree/main">Managing Data as a Product</a> @ Everywhere; December 2024 🇬🇧</li>
-                <li>📝 <a href="https://speakerdeck.com/angioia/building-your-enterprise-knowledge-graph-one-data-product-at-a-time">Building your Enterprise Knowledge Graph one data product at a time</a> @ Connected Data London; December 2024 🇬🇧</li>
-                <li>🎥 <a href="https://www.youtube.com/watch?v=MytpBc5EAsE">Why we need to focus on Knowledge Management, NOW!</a> @ Catalog & Cocktails: The Honest No-BS Data Podcast 2024 🇬🇧</li>
-                <li>🎥 <a href="https://www.youtube.com/watch?v=ethMBybkkCI">Knowledge Driven Data Management</a> @ Big Data LND 2024 🇬🇧</li>
-                <li>🎥 <a href="https://www.linkedin.com/feed/update/urn:li:activity:7232370974078234625/">Data Products & the Platform Organization</a> @ Boundaryless Webinar 🇬🇧</li>
-                <li>🎥 <a href="https://www.youtube.com/watch?v=35GAreCLkeM&t=2s">Architects & Data in a Volatile World</a> @ Data Value Show 2024 🇬🇧</li>
-                <li>🎥 <a href="https://www.youtube.com/watch?v=pC8fPaKdm3M">Managing Data as a Product: Overcoming the Challenges of Traditional Data Management</a> @ Tapas And Pretzels Podcast 2024 🇬🇧</li>
-                <li>🎥 <a href="https://www.youtube.com/watch?v=1fsD2JpEQqg&feature=youtu.be">Data Product Catalog: from Data Contracts to knowledge graph</a> @ Data Innovation Summit 2024 🇬🇧</li>
-                <li>🎥 <a href="https://www.youtube.com/watch?v=epuclRDokQM">A Panel Discussion on Data-Centricity + Artificial Intelligence</a> @ SWARM Community; April 2024 🇬🇧</li>
-                <li>🎥 <a href="https://youtu.be/Oe0mjHM2Ghw?si=9ZrA7qEvzTX8P2iA">Information Architecture From Data Products to Knowledge Graph</a> @ SWARM Community; May 2024 🇬🇧</li>
+                <li>🎥 <a href="https://www.youtube.com/watch?v=QCE6DUWnGZ4">Special Episode: Managing Data as a Product
+                        "The Book"</a> @ Tapas And Pretzels Podcast 2024 🇬🇧</li>
+                <li>📝 <a href="https://medium.com/p/19faa223f91b">What I Talk About When I Talk About Data Product</a>
+                    @ Medium Blog</li>
+                <li>📙 <a href="https://github.com/PacktPublishing/Managing-Data-as-a-Product/tree/main">Managing Data
+                        as a Product</a> @ Everywhere; December 2024 🇬🇧</li>
+                <li>📝 <a
+                        href="https://speakerdeck.com/angioia/building-your-enterprise-knowledge-graph-one-data-product-at-a-time">Building
+                        your Enterprise Knowledge Graph one data product at a time</a> @ Connected Data London; December
+                    2024 🇬🇧</li>
+                <li>🎥 <a href="https://www.youtube.com/watch?v=MytpBc5EAsE">Why we need to focus on Knowledge
+                        Management, NOW!</a> @ Catalog & Cocktails: The Honest No-BS Data Podcast 2024 🇬🇧</li>
+                <li>🎥 <a href="https://www.youtube.com/watch?v=ethMBybkkCI">Knowledge Driven Data Management</a> @ Big
+                    Data LND 2024 🇬🇧</li>
+                <li>🎥 <a href="https://www.linkedin.com/feed/update/urn:li:activity:7232370974078234625/">Data Products
+                        & the Platform Organization</a> @ Boundaryless Webinar 🇬🇧</li>
+                <li>🎥 <a href="https://www.youtube.com/watch?v=35GAreCLkeM&t=2s">Architects & Data in a Volatile
+                        World</a> @ Data Value Show 2024 🇬🇧</li>
+                <li>🎥 <a href="https://www.youtube.com/watch?v=pC8fPaKdm3M">Managing Data as a Product: Overcoming the
+                        Challenges of Traditional Data Management</a> @ Tapas And Pretzels Podcast 2024 🇬🇧</li>
+                <li>🎥 <a href="https://www.youtube.com/watch?v=1fsD2JpEQqg&feature=youtu.be">Data Product Catalog: from
+                        Data Contracts to knowledge graph</a> @ Data Innovation Summit 2024 🇬🇧</li>
+                <li>🎥 <a href="https://www.youtube.com/watch?v=epuclRDokQM">A Panel Discussion on Data-Centricity +
+                        Artificial Intelligence</a> @ SWARM Community; April 2024 🇬🇧</li>
+                <li>🎥 <a href="https://youtu.be/Oe0mjHM2Ghw?si=9ZrA7qEvzTX8P2iA">Information Architecture From Data
+                        Products to Knowledge Graph</a> @ SWARM Community; May 2024 🇬🇧</li>
             </ol>
             <h3>2023 stuff</h3>
             <ol>
-                <li>🎥 <a href="https://dama-italy.org/diac-2023/">Il ruolo del data management nell'era dell'AI Generativa</a> @ DAMA Italy Annual Convention; 2023 🇮🇹</li>
-                <li>📝 <a href="https://online.pubhtml5.com/vbdo/kkbl/#p=25">LLMs e Knowledge Graphs: un matrimonio perfetto</a> @ AgileItalia Magazine; 2023 🇮🇹</li>
-                <li>🎥 <a href="https://www.youtube.com/watch?v=ap8pWiRBvJQ">Semantic Data Product</a> @ Big Data LND; 2023 🇬🇧</li>
-                <li>🎥 <a href="https://www.youtube.com/watch?v=CKqSNn-7wiw">Data contract in practice</a> @ Data Innovation Summit 2023 🇬🇧</li>
-                <li>📝 <a href="https://medium.com/better-programming/data-contracts-in-practice-93e58d324f34">Data contract in practice</a> @ Medium; 2023 🇬🇧</li>
-                <li>📝 <a href="https://online.pubhtml5.com/vbdo/avys/#p=38">Dalla sperimentazione alla produzione con l'MLOps</a> @ AgileItalia Magazine; 2022 🇮🇹</li>
-                <li>📝 <a href="https://online.pubhtml5.com/vbdo/kslm/#p=34">Il Data Mesh e l'innovazione nel data management</a> @ AgileItalia Magazine; 2019 🇮🇹</li>
+                <li>🎥 <a href="https://dama-italy.org/diac-2023/">Il ruolo del data management nell'era dell'AI
+                        Generativa</a> @ DAMA Italy Annual Convention; 2023 🇮🇹</li>
+                <li>📝 <a href="https://online.pubhtml5.com/vbdo/kkbl/#p=25">LLMs e Knowledge Graphs: un matrimonio
+                        perfetto</a> @ AgileItalia Magazine; 2023 🇮🇹</li>
+                <li>🎥 <a href="https://www.youtube.com/watch?v=ap8pWiRBvJQ">Semantic Data Product</a> @ Big Data LND;
+                    2023 🇬🇧</li>
+                <li>🎥 <a href="https://www.youtube.com/watch?v=CKqSNn-7wiw">Data contract in practice</a> @ Data
+                    Innovation Summit 2023 🇬🇧</li>
+                <li>📝 <a href="https://medium.com/better-programming/data-contracts-in-practice-93e58d324f34">Data
+                        contract in practice</a> @ Medium; 2023 🇬🇧</li>
+                <li>📝 <a href="https://online.pubhtml5.com/vbdo/avys/#p=38">Dalla sperimentazione alla produzione con
+                        l'MLOps</a> @ AgileItalia Magazine; 2022 🇮🇹</li>
+                <li>📝 <a href="https://online.pubhtml5.com/vbdo/kslm/#p=34">Il Data Mesh e l'innovazione nel data
+                        management</a> @ AgileItalia Magazine; 2019 🇮🇹</li>
             </ol>
         </div>
     </div>
-    
+
     <script>
         // Funzione per aggiustare lo spazio tra header e immagine
         function adjustHeaderSpace() {
@@ -296,10 +365,10 @@
             const container = document.getElementById('mainContainer');
             const headerHeight = header.offsetHeight;
             const desiredSpace = 35; // Lo spazio desiderato in pixel
-            
+
             // Aggiorna il padding-top del container
             container.style.paddingTop = (headerHeight + desiredSpace) + 'px';
-            
+
             // Gestione del menu in modalità mobile
             if (window.innerWidth <= 768) {
                 // Se il menu non è collassato, regola il nav
@@ -308,19 +377,30 @@
                 }
             }
         }
-        
+
         // Esegui all'avvio
         window.addEventListener('load', adjustHeaderSpace);
-        
+
         // Esegui al ridimensionamento della finestra
         window.addEventListener('resize', adjustHeaderSpace);
-        
+
         // Toggle per il menu mobile
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
             document.querySelector('nav').classList.toggle('collapsed');
             // Ricalcola lo spazio dopo il toggle del menu
             setTimeout(adjustHeaderSpace, 10);
         });
     </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-37CXXRXWNC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-37CXXRXWNC');
+    </script>
 </body>
+
 </html>

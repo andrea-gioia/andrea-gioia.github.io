@@ -9,7 +9,7 @@
   
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    
+
     <style>
         html {
             scroll-behavior: smooth;
@@ -355,7 +355,9 @@
         /* For very small screens */
         @media screen and (max-width: 480px) {
             .container {
-                width: 100%;
+                width: 92%; /* Cambiato da 100% a 92% per mantenere un margine su entrambi i lati */
+                margin-left: auto;
+                margin-right: auto;
                 padding: 80px 10px 10px 10px;
             }
             
@@ -515,6 +517,16 @@
                 });
             });
         </script>
+
+         <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-37CXXRXWNC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-37CXXRXWNC');
+    </script>
 </body>
 
 </html>
