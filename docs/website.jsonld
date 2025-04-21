@@ -1,0 +1,60 @@
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "The Data Joy",
+    "alternateName": ["Andrea Gioia's Home Page"],
+    "description": "The Data Joy is Andrea Gioia's professional website showcasing his expertise as CTO at Quantyca and co-founder of blindata.io. With over 20 years of experience in data management, Andrea is the author of 'Managing Data As A Product' and a leading voice in data engineering, data mesh architecture, and knowledge graph implementation. The site features Andrea's thought leadership through blog posts, podcasts, and conference presentations on data product management, semantic data modeling, and knowledge-driven approaches to data governance. As a maintainer of the data product descriptor specification and contributor to the Data Product Ontology, Andrea shares valuable insights for data professionals navigating modern data architectures and strategies.",
+    "url": "https://thedatajoy.space/",
+    "author": {
+      "@type": "Person",
+      "name": "Andrea Gioia",
+      "givenName": "Andrea",
+      "familyName": "Gioia",
+      "jobTitle": ["Chief Technology Officer", "Co-founder", "Author"],
+      "worksFor": [
+          {
+              "@type": "Organization",
+              "name": "Quantyca",
+              "url": "https://www.quantyca.it/"
+          },
+          {
+              "@type": "Organization",
+              "name": "Blindata",
+              "url": "https://blindata.io/"
+          },
+          {
+              "@type": "Organization",
+              "name": "Packt Publishing/",
+              "url": "https://www.packtpub.com/"
+          }
+      ],
+      "memberOf": [
+          {
+              "@type": "Organization",
+              "name": "Open Data Mesh Initiative",
+              "url": "https://initiative.opendatamesh.org/"
+          },
+          {
+              "@type": "Organization",
+              "name": "Data Product Ontology Working Group",
+              "url": "https://ekgf.github.io/dprod/"
+          },
+          {
+              "@type": "Organization",
+              "name": "BITOL Technical Steering Committee",
+              "url": "https://bitol.io/"
+          },
+          {
+              "@type": "Organization",
+              "name": "DAMA Italy Scientific Committee",
+              "url": "https://dama-italy.org/"
+          }
+      ],
+      "knowsAbout": ["Data Management", "Data Product", "Data Engineering", "Data Mesh", "Knowledge Graphs", "Data Governance", "Artificial Intelligence", "Strategy"],
+      "sameAs": [
+        "https://www.linkedin.com/in/andreagioia/",
+        "https://medium.com/@andrea_gioia",
+        "https://github.com/andrea-gioia"
+      ]
+    }
+  }

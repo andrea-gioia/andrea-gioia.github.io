@@ -5,24 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>The Data Joy</title>
+    <title>The Data Joy: Andrea Gioia's thoughts on data, knowledge, AI, and strategy</title>
 
-    <!-- Meta tag SEO principali -->
+    <!-- Structured Data -->
+    <script type="application/ld+json" src="website.jsonld"></script>
+
+    <!-- Meta tag SEO -->
     <meta name="description"
-        content="Andrea Gioia è CTO di Quantyca, co-founder di blindata.io e autore del libro 'Managing Data As A Product'. Esperto di data management con oltre 20 anni di esperienza.">
+        content="The Data Joy is Andrea Gioia's professional website showcasing his expertise as CTO at Quantyca and co-founder of blindata.io. With over 20 years of experience in data management, Andrea is the author of 'Managing Data As A Product' and a leading voice in data engineering, data mesh architecture, and knowledge graph implementation. The site features Andrea's thought leadership through blog posts, podcasts, and conference presentations on data product management, semantic data modeling, and knowledge-driven approaches to data governance. As a maintainer of the data product descriptor specification and contributor to the Data Product Ontology, Andrea shares valuable insights for data professionals navigating modern data architectures and strategies.">
     <meta name="keywords"
-        content="Andrea Gioia, data management, data product, data engineering, data mesh, open data mesh, Quantyca, blindata.io">
+        content="Andrea Gioia, data management, data product, data engineering, data mesh, open data mesh, artificial intelligence, strategy, Quantyca, blindata.io">
     <meta name="author" content="Andrea Gioia">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.yourdomain.com/" />
+    <link rel="canonical" href="https://thedatajoy.space/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.yourdomain.com/">
-    <meta property="og:title" content="Andrea Gioia - CTO, Autore e Esperto di Data Management">
+    <meta property="og:url" content="https://thedatajoy.space/">
+    <meta property="og:title" content="The Data Joy: Andrea Gioia's thoughts on data, knowledge, AI, and strategy">
     <meta property="og:description"
-        content="Andrea Gioia è CTO di Quantyca, co-founder di blindata.io e autore del libro 'Managing Data As A Product'. Esperto di data management con oltre 20 anni di esperienza.">
-    <meta property="og:image" content="https://www.yourdomain.com/images/me.png">
+        content="Hey there! This is Andrea Gioia's digital home where I share my data adventures as CTO at Quantyca and co-founder of blindata.io. After 20+ years of playing with data, I wrote 'Managing Data As A Product' and love geeking out about data mesh, knowledge graphs, artificial intelligence, data strategy and smarter ways to handle the eneterprise information architecture. Drop by to check out my blog posts, podcast chats, and talk recordings where I share what I've learned about treating data as products and using semantics to make sense of it all. ">
+    <meta property="og:image" content="https://thedatajoy.space/images/me.png">
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -59,9 +62,7 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            /* Aggiunge i puntini di sospensione */
             margin-right: 40px;
-            /* Spazio per il menu-toggle */
         }
 
         .header-title a {
@@ -147,11 +148,7 @@
             max-width: 1000px;
             margin: 0 auto;
             padding: 0 20px;
-            /* Rimosso il padding top che verrà impostato da JavaScript */
         }
-
-        /* Non abbiamo più bisogno di queste media query specifiche per il padding-top */
-        /* poiché lo gestiremo con JavaScript */
 
         img {
             width: 240px;
@@ -159,20 +156,16 @@
             border-radius: 50%;
             display: block;
             margin: 0 auto 35px auto;
-            /* Spazio costante di 35px sotto l'immagine */
         }
 
-        /* Classe comune per tutti i contenitori con stile simile */
         .content-box {
             width: 100%;
             margin: 0 auto 40px auto;
-            /* Modificato per avere solo margine inferiore */
             padding: 20px;
             background: white;
             border-radius: 15px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             box-sizing: border-box;
-            /* Garantisce che padding non si aggiunga alla larghezza */
         }
 
         .intro p {
@@ -219,7 +212,6 @@
                 width: 180px;
                 height: 180px;
                 margin: 0 auto 35px auto;
-                /* Mantenuto lo spazio costante di 35px anche nei dispositivi piccoli */
             }
 
             .intro p,
@@ -227,12 +219,7 @@
             .section li {
                 font-size: 16px;
             }
-
-            /* Non abbiamo più bisogno di questo perché il padding-top è gestito da JavaScript */
         }
-
-        /* Utilizziamo JavaScript per garantire lo spazio corretto */
-        /* Script aggiunto alla fine del body */
     </style>
 </head>
 
@@ -254,21 +241,13 @@
 
         <div class="content-box intro">
             <h1>Hi there 👋</h1>
-            <p>I'm Andrea Gioia, CTO at <a href="https://www.quantyca.it/">Quantyca</a>, and Co-founder of <a
-                    href="https://blindata.io/">blindata.io</a>. With 20+ years in the game, I have navigated the data
-                universe up and down, one project at a time.</p>
-            <p>📙 Author of the book <a href="https://a.co/d/452Qkih">Managing Data As A Product</a>, published by Packt
-                in 2024.</p>
-            <p>🚀 Proudly steering the ship at the <a href="https://www.meetup.com/it-IT/data-engineering-italy/">Data
-                    Engineering Italy Meetup</a> and championing the <a href="https://initiative.opendatamesh.org/">Open
-                    Data Mesh Initiative</a>.</p>
-            <p>🟠 Maintainer of the <a href="https://dpds.opendatamesh.org/">data product descriptor specification</a>
-                and product owner of the open-source <a
-                    href="https://github.com/opendatamesh-initiative/odm-platform">ODM Platform</a>.</p>
-            <p>🛠️ Contributor of <a href="https://ekgf.github.io/dprod/">Data Product Ontology (DPROD)</a>.</p>
-            <p>🌐 Member of <a href="https://www.dama.org/cpages/home">DAMA</a> and part of the scientific committee of
-                the <a href="https://dama-italy.org/">DAMA Italian Chapter</a> since 2023.</p>
-            <p>📫 You can reach me on <a href="https://www.linkedin.com/in/andreagioia/">LinkedIn</a>.</p>
+            <p>I'm Andrea Gioia, CTO at <a href="https://www.quantyca.it/" target="_blank">Quantyca</a>, and Co-founder of <a href="https://blindata.io/" target="_blank">blindata.io</a>. With 20+ years in the game, I have navigated the data universe up and down, one project at a time.</p>
+            <p>📙 Author of the book <a href="https://a.co/d/452Qkih" target="_blank">Managing Data As A Product</a>, published by Packt in 2024.</p>
+            <p>🚀 Proudly steering the ship at the <a href="https://www.meetup.com/it-IT/data-engineering-italy/" target="_blank">Data Engineering Italy Meetup</a> and championing the <a href="https://initiative.opendatamesh.org/" target="_blank">Open Data Mesh Initiative</a>.</p>
+            <p>🟠 Maintainer of the <a href="https://dpds.opendatamesh.org/" target="_blank">data product descriptor specification</a> and product owner of the open-source <a href="https://github.com/opendatamesh-initiative/odm-platform" target="_blank">ODM Platform</a>.</p>
+            <p>🛠️ Contributor of <a href="https://ekgf.github.io/dprod/" target="_blank">Data Product Ontology (DPROD)</a>.</p>
+            <p>🌐 Member of <a href="https://www.dama.org/cpages/home" target="_blank">DAMA</a> and part of the scientific committee of the <a href="https://dama-italy.org/" target="_blank">DAMA Italian Chapter</a> since 2023.</p>
+            <p>📫 You can reach me on <a href="https://www.linkedin.com/in/andreagioia/" target="_blank">LinkedIn</a>.</p>
         </div>
 
         <div class="content-box section">
@@ -288,71 +267,71 @@
             <h2>My feed</h2>
             <h3>Upcoming stuff</h3>
             <ol>
-                <li><a href="https://datainnovationsummit.com/">Data Innovation Summit</a> @ Stockholm; May 2025 🇬🇧
+                <li><a href="https://datainnovationsummit.com/" target="_blank">Data Innovation Summit</a> @ Stockholm; May 2025 🇬🇧
                 </li>
-                <li><a href="https://2025.datameshlive.com/">Data Mesh Live</a> @ Antwerp; June 2025 🇬🇧</li>
-                <li><a href="https://www.bigdataldn.com/">Big Data London</a> @ London; September 2025 🇬🇧</li>
+                <li><a href="https://2025.datameshlive.com/" target="_blank">Data Mesh Live</a> @ Antwerp; June 2025 🇬🇧</li>
+                <li><a href="https://www.bigdataldn.com/" target="_blank">Big Data London</a> @ London; September 2025 🇬🇧</li>
             </ol>
             <h3>Recent stuff</h3>
             <ol>
                 <li>🎥 <a
-                        href="https://www.linkedin.com/events/damaitalybookclub-managingdataa7298302218586275841/comments">Managing
+                        href="https://www.linkedin.com/events/damaitalybookclub-managingdataa7298302218586275841/comments" target="_blank">Managing
                         Data as a Product</a> @ DAMA Italy Book Club; March 2025 🇮🇹</li>
-                <li>🎥 <a href="https://www.youtube.com/watch?v=Sqi98tJNdkQ">From Monolithic Knowledge Graph to
+                <li>🎥 <a href="https://www.youtube.com/watch?v=Sqi98tJNdkQ" target="_blank">From Monolithic Knowledge Graph to
                         Distributed Knowledge Mesh</a> @ ESTES PARK GROUP; March 2025 🇬🇧</li>
                 <li>📝 <a
-                        href="https://medium.com/@andrea_gioia/data-contract-vs-data-product-specifications-8ffa3cc16725">Data
-                        Contract vs. Data Product Specifications: Friends, Enemies, or Frenemies?</a> @ Medium Blog</li>
+                        href="https://medium.com/@andrea_gioia/data-contract-vs-data-product-specifications-8ffa3cc16725" target="_blank">Data
+                        Contract vs. Data Product Specifications: Friends, Enemies, or Frenemies?</a> @ Medium Blog  🇬🇧</li>
                 <li>📝 <a
-                        href="https://medium.com/@andrea_gioia/how-to-define-internal-data-specifications-to-govern-your-data-ecosystem-9d59b3473dfe">How
-                        to Define Internal Data Specifications to Govern Your Data Ecosystem</a> @ Medium Blog</li>
+                        href="https://medium.com/@andrea_gioia/how-to-define-internal-data-specifications-to-govern-your-data-ecosystem-9d59b3473dfe" target="_blank">How
+                        to Define Internal Data Specifications to Govern Your Data Ecosystem</a> @ Medium Blog  🇬🇧</li>
                 <li>🎥 <a href="https://youtu.be/_12MjtLCJnQ?si=42Y93qfhOTLyC01e">What's Data Product</a> @ Lets Talk
-                    About Data‬ Podcast 2025 🇬🇧</li>
+                    About Data Podcast 2025 🇬🇧</li>
             </ol>
             <h3>2024 stuff</h3>
             <ol>
-                <li>🎥 <a href="https://www.youtube.com/watch?v=QCE6DUWnGZ4">Special Episode: Managing Data as a Product
+                <li>🎥 <a href="https://www.youtube.com/watch?v=QCE6DUWnGZ4" target="_blank">Special Episode: Managing Data as a Product
                         "The Book"</a> @ Tapas And Pretzels Podcast 2024 🇬🇧</li>
-                <li>📝 <a href="https://medium.com/p/19faa223f91b">What I Talk About When I Talk About Data Product</a>
+                <li>📝 <a href="https://medium.com/p/19faa223f91b" target="_blank">What I Talk About When I Talk About Data Product</a>
                     @ Medium Blog</li>
-                <li>📙 <a href="https://github.com/PacktPublishing/Managing-Data-as-a-Product/tree/main">Managing Data
+                <li>📙 <a href="https://github.com/PacktPublishing/Managing-Data-as-a-Product/tree/main" target="_blank">Managing Data
                         as a Product</a> @ Everywhere; December 2024 🇬🇧</li>
                 <li>📝 <a
-                        href="https://speakerdeck.com/angioia/building-your-enterprise-knowledge-graph-one-data-product-at-a-time">Building
+                        href="https://speakerdeck.com/angioia/building-your-enterprise-knowledge-graph-one-data-product-at-a-time" target="_blank">Building
                         your Enterprise Knowledge Graph one data product at a time</a> @ Connected Data London; December
                     2024 🇬🇧</li>
-                <li>🎥 <a href="https://www.youtube.com/watch?v=MytpBc5EAsE">Why we need to focus on Knowledge
+                <li>🎥 <a href="https://www.youtube.com/watch?v=MytpBc5EAsE" target="_blank">Why we need to focus on Knowledge
                         Management, NOW!</a> @ Catalog & Cocktails: The Honest No-BS Data Podcast 2024 🇬🇧</li>
-                <li>🎥 <a href="https://www.youtube.com/watch?v=ethMBybkkCI">Knowledge Driven Data Management</a> @ Big
+                <li>🎥 <a href="https://www.youtube.com/watch?v=ethMBybkkCI" target="_blank">Knowledge Driven Data Management</a> @ Big
                     Data LND 2024 🇬🇧</li>
-                <li>🎥 <a href="https://www.linkedin.com/feed/update/urn:li:activity:7232370974078234625/">Data Products
+                <li>🎥 <a href="https://www.linkedin.com/feed/update/urn:li:activity:7232370974078234625/" target="_blank">Data Products
                         & the Platform Organization</a> @ Boundaryless Webinar 🇬🇧</li>
-                <li>🎥 <a href="https://www.youtube.com/watch?v=35GAreCLkeM&t=2s">Architects & Data in a Volatile
+                <li>🎥 <a href="https://www.youtube.com/watch?v=35GAreCLkeM&t=2s" target="_blank">Architects & Data in a Volatile
                         World</a> @ Data Value Show 2024 🇬🇧</li>
-                <li>🎥 <a href="https://www.youtube.com/watch?v=pC8fPaKdm3M">Managing Data as a Product: Overcoming the
+                <li>🎥 <a href="https://www.youtube.com/watch?v=pC8fPaKdm3M" target="_blank">Managing Data as a Product: Overcoming the
                         Challenges of Traditional Data Management</a> @ Tapas And Pretzels Podcast 2024 🇬🇧</li>
-                <li>🎥 <a href="https://www.youtube.com/watch?v=1fsD2JpEQqg&feature=youtu.be">Data Product Catalog: from
+                <li>🎥 <a href="https://www.youtube.com/watch?v=1fsD2JpEQqg&feature=youtu.be" target="_blank">Data Product Catalog: from
                         Data Contracts to knowledge graph</a> @ Data Innovation Summit 2024 🇬🇧</li>
-                <li>🎥 <a href="https://www.youtube.com/watch?v=epuclRDokQM">A Panel Discussion on Data-Centricity +
+                <li>🎥 <a href="https://www.youtube.com/watch?v=epuclRDokQM" target="_blank">A Panel Discussion on Data-Centricity +
                         Artificial Intelligence</a> @ SWARM Community; April 2024 🇬🇧</li>
-                <li>🎥 <a href="https://youtu.be/Oe0mjHM2Ghw?si=9ZrA7qEvzTX8P2iA">Information Architecture From Data
+                <li>🎥 <a href="https://youtu.be/Oe0mjHM2Ghw?si=9ZrA7qEvzTX8P2iA" target="_blank">Information Architecture From Data
                         Products to Knowledge Graph</a> @ SWARM Community; May 2024 🇬🇧</li>
             </ol>
             <h3>2023 stuff</h3>
             <ol>
-                <li>🎥 <a href="https://dama-italy.org/diac-2023/">Il ruolo del data management nell'era dell'AI
+                <li>🎥 <a href="https://dama-italy.org/diac-2023/" target="_blank">Il ruolo del data management nell'era dell'AI
                         Generativa</a> @ DAMA Italy Annual Convention; 2023 🇮🇹</li>
-                <li>📝 <a href="https://online.pubhtml5.com/vbdo/kkbl/#p=25">LLMs e Knowledge Graphs: un matrimonio
+                <li>📝 <a href="https://online.pubhtml5.com/vbdo/kkbl/#p=25" target="_blank">LLMs e Knowledge Graphs: un matrimonio
                         perfetto</a> @ AgileItalia Magazine; 2023 🇮🇹</li>
                 <li>🎥 <a href="https://www.youtube.com/watch?v=ap8pWiRBvJQ">Semantic Data Product</a> @ Big Data LND;
                     2023 🇬🇧</li>
-                <li>🎥 <a href="https://www.youtube.com/watch?v=CKqSNn-7wiw">Data contract in practice</a> @ Data
+                <li>🎥 <a href="https://www.youtube.com/watch?v=CKqSNn-7wiw" target="_blank">Data contract in practice</a> @ Data
                     Innovation Summit 2023 🇬🇧</li>
-                <li>📝 <a href="https://medium.com/better-programming/data-contracts-in-practice-93e58d324f34">Data
+                <li>📝 <a href="https://medium.com/better-programming/data-contracts-in-practice-93e58d324f34" target="_blank">Data
                         contract in practice</a> @ Medium; 2023 🇬🇧</li>
-                <li>📝 <a href="https://online.pubhtml5.com/vbdo/avys/#p=38">Dalla sperimentazione alla produzione con
+                <li>📝 <a href="https://online.pubhtml5.com/vbdo/avys/#p=38" target="_blank">Dalla sperimentazione alla produzione con
                         l'MLOps</a> @ AgileItalia Magazine; 2022 🇮🇹</li>
-                <li>📝 <a href="https://online.pubhtml5.com/vbdo/kslm/#p=34">Il Data Mesh e l'innovazione nel data
+                <li>📝 <a href="https://online.pubhtml5.com/vbdo/kslm/#p=34" target="_blank">Il Data Mesh e l'innovazione nel data
                         management</a> @ AgileItalia Magazine; 2019 🇮🇹</li>
             </ol>
         </div>
