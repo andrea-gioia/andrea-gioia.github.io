@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--	thedatajoy.site sitemap	-->
+<!--	see also: https://www.sitemaps.org/	-->
+<!--	see also: https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview	-->
+<!--	see also: https://search.google.com/u/1/search-console/sitemaps?resource_id=sc-domain%3Athedatajoy.space	-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>https://thedatajoy.space/</loc>
+		<lastmod>2025-04-21</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>https://thedatajoy.space/index.html</loc>
+		<lastmod>2025-04-21</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>https://thedatajoy.space/book/book.html</loc>
+		<lastmod>2025-04-21</lastmod>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://thedatajoy.space/podcast/podcast.html</loc>
+		<lastmod>2025-04-21</lastmod>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://thedatajoy.space/rants/rants.html</loc>
+		<lastmod>2025-04-21</lastmod>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://thedatajoy.space/blog/blog.html</loc>
+		<lastmod>2025-04-21</lastmod>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://thedatajoy.space/talks/talks.html</loc>
+		<lastmod>2025-04-21</lastmod>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://thedatajoy.space/podcast/episode-001.html</loc>
+		<lastmod>2025-04-21</lastmod>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>
+			https://thedatajoy.space/blog/2024/what_i_talk_about_when_i_talk_about_data_product.html</loc>
+		<lastmod>2024-11-20</lastmod>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://thedatajoy.space/blog/2025/data-contract-vs-data-product-specifications.html</loc>
+		<lastmod>2025-02-09</lastmod>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://thedatajoy.space/blog/2025/how-to-define-internal-data-specifications.html</loc>
+		<lastmod>2025-02-02</lastmod>
+		<priority>0.8</priority>
+	</url>
+</urlset>
