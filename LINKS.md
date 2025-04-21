@@ -12,3 +12,11 @@ https://developers.google.com/search/docs/crawling-indexing/links-crawlable#writ
 
 ## Structured data
 https://developers.google.com/search/docs/appearance/site-names#how-to-add-structured-data
+
+https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data
+
+https://validator.schema.org/
+
+https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl
+
+https://developers.google.com/search/docs/appearance/google-images
