@@ -166,6 +166,21 @@
             word-wrap: break-word;
         }
 
+        .links {
+            font-size: 16px; 
+            color: #777;
+        }
+        .links a {
+            color: #FF5722;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .links a:hover {
+            background-color: #fae5c3;
+            text-decoration: none;
+        }
+
         .cta-buttons {
             display: flex;
             gap: 20px;
@@ -411,10 +426,17 @@
                 <h2>A Comprehensive Guide to Design and Build Data Product-Centered Sociotechnical Architecture</h2>
                 <p>Author: Andrea Gioia | Publication Date: March 2025</p>
                 <div class="cta-buttons">
-                    <a onclick="window.open('https://a.co/d/5EyH1Zm', '_blank')" class="cta-button">Buy Now</a>
+                    <a href="https://a.co/d/5EyH1Zm" target="_blank" class="cta-button">Buy Now</a>
                     <a href="#preface" class="cta-button learn-more">Learn More</a>
                 </div>
-                <p style="font-size: 16px; color: #777;">Also available from Bookshop.org, Packt, ebooks.com, Kobo, O'Reilly, and more!</p>
+                <p class="links" style="font-size: 16px; color: #777;">Also available from 
+                    <a href="https://bookshop.org/p/books/managing-data-as-a-product-design-and-build-data-product-centered-socio-technical-architectures/8eff85c769baea27?ean=9781835468531&next=t" target="_blank">Bookshop.org</a>, 
+                    <a href="https://www.packtpub.com/en-us/product/managing-data-as-a-product-9781835469378" target="_blank">Packt</a>, 
+                    <a href="https://www.ebooks.com/en-us/book/211380977/managing-data-as-a-product/andrea-gioia/"  target="_blank">ebooks.com</a>, 
+                    <a href="https://www.kobo.com/us/en/ebook/managing-data-as-a-product?sId=8b0b1506-83e4-4e75-a9ac-06ddb386a37b" target="_blank">Kobo</a>, 
+                    <a href="https://learning.oreilly.com/library/view/managing-data-as/9781835468531/" target="_blank">O'Reilly</a>, 
+                    and more!
+                </p>
             </div>
             <img src="book-cover.jpg" alt="Book Cover" class="book-cover">
         </div>

@@ -20,3 +20,6 @@ https://validator.schema.org/
 https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl
 
 https://developers.google.com/search/docs/appearance/google-images
+
+
+https://creators.google/en-us/content-creation-guides/audience-engagement/
